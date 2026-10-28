@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import Icon, { IconSprite } from './Icon.jsx'
+import ContactFab from './ContactFab.jsx'
 import { Button, asset } from './ui.jsx'
 import { CONTACT, NAV, PORTAL_URL } from '../content.js'
 
@@ -93,6 +94,7 @@ export default function Layout() {
       <Header />
       <main><Outlet /></main>
       <Footer />
+      <ContactFab />
     </>
   )
 }
