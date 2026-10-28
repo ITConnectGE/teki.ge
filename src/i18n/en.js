@@ -2,8 +2,8 @@ import { PRICE_FROM as P } from '../content.js'
 
 export default {
   meta: {
-    home: { title: '', description: 'Teki.GE — engineering maintenance for hotels, shops, cafés and restaurants since 2019: electrical, heating and cooling, generators. A fixed monthly fee, planned visits and a digital client portal.' },
-    who: { title: 'Who it’s for', description: 'Teki.GE is for directors, engineering managers and business owners of hotels, shops, cafés and restaurants.' },
+    home: { title: '', description: 'Teki.GE — engineering maintenance for hotels, offices, shops, cafés and restaurants since 2019: electrical, heating and cooling, generators. A fixed monthly fee, planned visits and a digital client portal.' },
+    who: { title: 'Who it’s for', description: 'Teki.GE is for directors, engineering managers and business owners of hotels, offices, shops, cafés and restaurants.' },
     services: { title: 'Services', description: 'Teki.GE services: electrical systems, heating and cooling equipment and generators. Planned visits, response to requests and subcontractor management.' },
     digital: { title: 'Digital services', description: 'Teki.GE digital services: helpdesk, equipment inventory, reports, photo gallery, repair and warranty history — all in the client portal.' },
     pricing: { title: 'Pricing', description: `Teki.GE Basic package: from ${P} GEL per month per site. What the package includes and what is quoted separately.` },
@@ -34,7 +34,7 @@ export default {
   home: {
     kicker: 'Engineering maintenance · since 2019',
     title: 'Your building’s engineering systems — with one accountable team',
-    lead: 'Electrical, heating and cooling and generators for hotels, shops, cafés and restaurants. A fixed monthly fee, planned visits and a digital portal where every unit and every job is on record.',
+    lead: 'Electrical, heating and cooling and generators for hotels, offices, shops, cafés and restaurants. A fixed monthly fee, planned visits and a digital portal where every unit and every job is on record.',
     secondary: 'What’s included and what it costs',
     facts: [['2019', 'serving businesses since'], [`${P} ₾`, 'and up, per month, per site'], ['1 visit', 'planned every month']],
     digKicker: 'Digital services',
@@ -120,6 +120,7 @@ export default {
     typesKicker: 'Sites', typesTitle: 'Who we serve',
     types: [
       { title: 'Hotels', text: 'Electrical and climate in rooms, lobbies and plant rooms. We plan work so guests aren’t disturbed.' },
+      { title: 'Offices', text: 'Lighting, climate and backup power, including for the server room. We plan work so staff aren’t disrupted.' },
       { title: 'Shops', text: 'Lighting, climate and backup power. A shop shouldn’t stop during opening hours.' },
       { title: 'Cafés and restaurants', text: 'Power for the dining room and kitchen, heating and cooling and generators, planned around peak hours.' },
     ],
@@ -172,7 +173,7 @@ export default {
     name: 'Name', type: 'Type of site',
     phone: 'Phone', message: 'Comment', optional: '(optional)', choose: 'Select',
     messagePlaceholder: 'e.g. city, approximate number of units',
-    types: ['Hotel', 'Shop', 'Café', 'Restaurant', 'Other'],
+    types: ['Hotel', 'Shop', 'Café', 'Restaurant', 'Office', 'Other'],
     submit: 'Send request',
     note: 'We’ll contact you to arrange a visit.',
     errors: { name: 'Enter your name', phone: 'Enter a phone number', type: 'Select the type of site' },

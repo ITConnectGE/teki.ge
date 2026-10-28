@@ -2,8 +2,8 @@ import { PRICE_FROM as P } from '../content.js'
 
 export default {
   meta: {
-    home: { title: '', description: 'Teki.GE — 2019’dan beri oteller, mağazalar, kafeler ve restoranlar için teknik bakım: elektrik, ısıtma-soğutma, jeneratör. Sabit aylık ücret, planlı ziyaretler ve dijital müşteri portalı.' },
-    who: { title: 'Kimler için', description: 'Teki.GE; otel, mağaza, kafe ve restoranların direktörleri, teknik müdürleri ve işletme sahipleri içindir.' },
+    home: { title: '', description: 'Teki.GE — 2019’dan beri oteller, ofisler, mağazalar, kafeler ve restoranlar için teknik bakım: elektrik, ısıtma-soğutma, jeneratör. Sabit aylık ücret, planlı ziyaretler ve dijital müşteri portalı.' },
+    who: { title: 'Kimler için', description: 'Teki.GE; otel, ofis, mağaza, kafe ve restoranların direktörleri, teknik müdürleri ve işletme sahipleri içindir.' },
     services: { title: 'Hizmetler', description: 'Teki.GE hizmetleri: elektrik sistemleri, ısıtma-soğutma ekipmanları ve jeneratörler. Planlı ziyaretler, taleplere müdahale ve alt yüklenici yönetimi.' },
     digital: { title: 'Dijital hizmetler', description: 'Teki.GE dijital hizmetleri: helpdesk, ekipman envanteri, raporlar, fotoğraf galerisi, onarım ve garanti geçmişi — hepsi müşteri portalında.' },
     pricing: { title: 'Fiyat', description: `Teki.GE Basic paketi: tesis başına aylık ${P} GEL’den başlayan fiyatlarla. Pakete neler dahil, neler ayrıca teklif edilir.` },
@@ -34,7 +34,7 @@ export default {
   home: {
     kicker: 'Teknik bakım · 2019’dan beri',
     title: 'Tesisinizin teknik sistemleri — tek sorumlu ekiple',
-    lead: 'Oteller, mağazalar, kafeler ve restoranlar için elektrik, ısıtma-soğutma ve jeneratör. Sabit aylık ücret, planlı ziyaretler ve her ekipmanın, her işin görüldüğü dijital portal.',
+    lead: 'Oteller, ofisler, mağazalar, kafeler ve restoranlar için elektrik, ısıtma-soğutma ve jeneratör. Sabit aylık ücret, planlı ziyaretler ve her ekipmanın, her işin görüldüğü dijital portal.',
     secondary: 'Neler dahil, fiyatı ne',
     facts: [['2019', 'yılından beri işletmelere hizmet'], [`${P} ₾’den`, 'başlayan fiyat, aylık, tesis başına'], ['1 ziyaret', 'her ay planlı']],
     digKicker: 'Dijital hizmetler',
@@ -120,6 +120,7 @@ export default {
     typesKicker: 'Tesisler', typesTitle: 'Kimlere hizmet veriyoruz',
     types: [
       { title: 'Otel', text: 'Odaların, lobinin ve teknik odaların elektriği ve iklimlendirmesi. İşleri misafirler rahatsız olmayacak şekilde planlarız.' },
+      { title: 'Ofis', text: 'Aydınlatma, iklimlendirme ve sunucu odası dahil yedek güç. İşleri çalışanları rahatsız etmeyecek şekilde planlarız.' },
       { title: 'Mağaza', text: 'Aydınlatma, iklimlendirme ve yedek güç. Mağaza çalışma saatlerinde durmamalı.' },
       { title: 'Kafe ve restoran', text: 'Salon ve mutfağın elektriği, ısıtma-soğutma ve jeneratör; yoğun saatler göz önünde bulundurularak.' },
     ],
@@ -172,7 +173,7 @@ export default {
     name: 'Ad', type: 'Tesis türü',
     phone: 'Telefon', message: 'Yorum', optional: '(isteğe bağlı)', choose: 'Seçin',
     messagePlaceholder: 'ör. şehir, yaklaşık ekipman sayısı',
-    types: ['Otel', 'Mağaza', 'Kafe', 'Restoran', 'Diğer'],
+    types: ['Otel', 'Mağaza', 'Kafe', 'Restoran', 'Ofis', 'Diğer'],
     submit: 'Talebi gönder',
     note: 'Ziyaret zamanını ayarlamak için sizinle iletişime geçeceğiz.',
     errors: { name: 'Adınızı girin', phone: 'Telefon numarası girin', type: 'Tesis türünü seçin' },

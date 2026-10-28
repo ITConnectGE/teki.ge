@@ -38,4 +38,4 @@ export const PHOTOS = ['assets/photos/install-camera-800.jpg', 'assets/photos/in
 
 // The lead endpoint accepts these Georgian values whatever language the form is shown in;
 // same order as t.form.types.
-export const FORM_TYPES = ['სასტუმრო', 'მაღაზია', 'კაფე', 'რესტორანი', 'სხვა']
+export const FORM_TYPES = ['სასტუმრო', 'მაღაზია', 'კაფე', 'რესტორანი', 'ოფისი', 'სხვა']

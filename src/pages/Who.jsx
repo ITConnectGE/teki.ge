@@ -22,7 +22,7 @@ export default function Who() {
       <Section band labelledBy="types-title">
         <Kicker>{w.typesKicker}</Kicker>
         <H2 id="types-title">{w.typesTitle}</H2>
-        <Grid>
+        <Grid cols={4}>
           {w.types.map((x) => <Card key={x.title}><CardTitle>{x.title}</CardTitle><CardText>{x.text}</CardText></Card>)}
         </Grid>
       </Section>
