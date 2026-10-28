@@ -43,15 +43,19 @@ export function Section({ band, children, label, labelledBy }) {
   )
 }
 
-const BTN = 'inline-flex min-h-11 items-center justify-center gap-2 whitespace-nowrap rounded-lg px-5 py-2.5 text-sm font-semibold no-underline transition-colors motion-reduce:transition-none'
+const BTN = 'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-semibold no-underline transition-colors motion-reduce:transition-none'
+const SIZES = {
+  md: 'min-h-11 px-5 py-2.5 text-sm',
+  sm: 'min-h-9 px-3.5 py-1.5 text-xs',
+}
 const VARIANTS = {
   red: 'bg-btn text-white hover:bg-accent-hover',
   navy: 'bg-white/10 text-on-navy hover:bg-white/20',
   soft: 'bg-bg-2 text-ink hover:bg-line',
 }
 
-export function Button({ to, href, variant = 'red', className = '', children, ...rest }) {
-  const cls = `${BTN} ${VARIANTS[variant]} ${className}`
+export function Button({ to, href, variant = 'red', size = 'md', className = '', children, ...rest }) {
+  const cls = `${BTN} ${SIZES[size]} ${VARIANTS[variant]} ${className}`
   if (to) return <Link to={to} className={cls} {...rest}>{children}</Link>
   return <a href={href} className={cls} {...rest}>{children}</a>
 }

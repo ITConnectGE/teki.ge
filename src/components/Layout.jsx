@@ -31,7 +31,7 @@ function Header() {
           {NAV.map((n) => <NavLink key={n.to} to={n.to} className={navClass}>{n.label}</NavLink>)}
         </nav>
         <div className="flex items-center gap-2">
-          <Button to="/contact/" className="max-[440px]:hidden">შეფასების მოთხოვნა</Button>
+          <Button to="/contact/" size="sm" className="max-[440px]:hidden">შეფასების მოთხოვნა</Button>
           <button
             type="button"
             className="inline-flex size-11 items-center justify-center rounded-lg bg-bg-2 text-ink lg:hidden"
