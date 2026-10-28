@@ -211,8 +211,8 @@ footer a:hover { color: var(--on-deep); text-decoration: underline; }
 .mobile-nav a { padding: 13px 0; border-bottom: 1px solid var(--line); text-decoration: none; font-weight: 600; }
 .mobile-nav a:last-child { border-bottom: 0; }
 .mobile-nav a[aria-current="page"] { color: var(--red-ink); }
-@media (max-width: 860px) { .menu-btn { display: inline-flex; } }
-@media (min-width: 861px) { .mobile-nav { display: none !important; } }
+@media (max-width: 1060px) { .nav { display: none; } .header .wrap { justify-content: space-between; } .menu-btn { display: inline-flex; } }
+@media (min-width: 1061px) { .mobile-nav { display: none !important; } }
 @media (max-width: 440px) { .header-actions .btn { display: none; } }
 
 /* Inner page head */
@@ -241,6 +241,12 @@ a.card:hover { border-color: var(--line-strong); box-shadow: var(--shadow); }
 .card p { color: var(--ink-2); }
 .card .more { margin-top: auto; padding-top: 6px; }
 @media (max-width: 860px) { .cards { grid-template-columns: minmax(0, 1fr); } }
+.cards-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1060px) { .cards-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .cards-4 { grid-template-columns: minmax(0, 1fr); } }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.btn-line { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+.btn-line:hover { background: var(--bg-2); }
 
 /* Price teaser on the home page */
 .price-teaser { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: 48px; align-items: center; }
