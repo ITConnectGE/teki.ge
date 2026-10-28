@@ -167,9 +167,9 @@
   .team-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
   .since { font: 800 64px/64px var(--font); letter-spacing: -.03em; color: var(--red-ink); }
   .since small { display: block; font: 600 14px/20px var(--font); letter-spacing: 0; color: var(--ink-2); text-align: right; }
-  .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 36px; }
+  .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 32px; max-width: 880px; }
   .gallery figure { margin: 0; }
-  .gallery img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r-lg); }
+  .gallery img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-lg); }
   .gallery figcaption { margin-top: 10px; color: var(--ink-2); font-size: 14px; line-height: 20px; }
   @media (max-width: 760px) { .gallery { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .gallery figure:last-child { grid-column: 1 / -1; } .gallery figure:last-child img { aspect-ratio: 16 / 9; } .since { font-size: 48px; line-height: 48px; } .since small { text-align: left; } }
 
