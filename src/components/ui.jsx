@@ -2,12 +2,21 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from './Icon.jsx'
 import { PRICE_FROM } from '../content.js'
+import { useI18n } from '../i18n/index.jsx'
 
 // Public files (logo, photos) live under the build's base, which is "./" for the preview build.
 export const asset = (path) => `${import.meta.env.BASE_URL}${path}`
 
-export function usePageTitle(title) {
+export function usePageTitle(key) {
+  const { t } = useI18n()
+  const title = t.meta[key]?.title
   useEffect(() => { document.title = title ? `${title} — Teki.GE` : 'Teki.GE' }, [title])
+}
+
+// Internal links are written without a language; this puts them under the current one.
+export function useLocalTo() {
+  const { p } = useI18n()
+  return (to) => (typeof to === 'string' ? p(to) : { ...to, pathname: p(to.pathname) })
 }
 
 export function Dia() {
@@ -55,14 +64,16 @@ const VARIANTS = {
 }
 
 export function Button({ to, href, variant = 'red', size = 'md', className = '', children, ...rest }) {
+  const lt = useLocalTo()
   const cls = `${BTN} ${SIZES[size]} ${VARIANTS[variant]} ${className}`
-  if (to) return <Link to={to} className={cls} {...rest}>{children}</Link>
+  if (to) return <Link to={lt(to)} className={cls} {...rest}>{children}</Link>
   return <a href={href} className={cls} {...rest}>{children}</a>
 }
 
 export function More({ to, children }) {
+  const lt = useLocalTo()
   return (
-    <Link to={to} className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-accent no-underline hover:underline">
+    <Link to={lt(to)} className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-accent no-underline hover:underline">
       {children} <Icon name="arrow" className="size-4" />
     </Link>
   )
@@ -82,8 +93,9 @@ export function SecHead({ kicker, title, id, more, children }) {
 }
 
 export function Card({ to, children, className = '' }) {
+  const lt = useLocalTo()
   const cls = `flex flex-col gap-2 rounded-xl bg-(--card) p-6 no-underline ${className}`
-  if (to) return <Link to={to} className={`${cls} transition-shadow hover:shadow-[0_8px_24px_-12px_rgba(20,32,46,.25)]`}>{children}</Link>
+  if (to) return <Link to={lt(to)} className={`${cls} transition-shadow hover:shadow-[0_8px_24px_-12px_rgba(20,32,46,.25)]`}>{children}</Link>
   return <div className={cls}>{children}</div>
 }
 
@@ -118,30 +130,34 @@ export function PageHead({ kicker, title, lead }) {
 }
 
 export function CtaBand() {
+  const { t } = useI18n()
   return (
-    <section aria-label="შეფასების მოთხოვნა" className="bg-navy py-12 text-on-navy [--focus:#fff]">
+    <section aria-label={t.common.ctaLabel} className="bg-navy py-12 text-on-navy [--focus:#fff]">
       <div className="wrap flex flex-wrap items-center justify-between gap-6">
         <div>
-          <h2 className="text-xl leading-7 font-extrabold md:text-[22px] md:leading-[30px]">დაიწყეთ ობიექტის აღწერით</h2>
-          <p className="mt-1.5 text-on-navy-2">მოვალთ ობიექტზე, აღვწერთ დანადგარებს და გიგზავნით ფასს და გეგმას.</p>
+          <h2 className="text-xl leading-7 font-extrabold md:text-[22px] md:leading-[30px]">{t.common.ctaTitle}</h2>
+          <p className="mt-1.5 text-on-navy-2">{t.common.ctaText}</p>
         </div>
-        <Button to="/contact/" className="w-full sm:w-auto">მოითხოვეთ შეფასება <Icon name="arrow" className="size-[18px]" /></Button>
+        <Button to="/contact/" className="w-full sm:w-auto">{t.common.request} <Icon name="arrow" className="size-[18px]" /></Button>
       </div>
     </section>
   )
 }
 
 export function PricePlate() {
+  const { t } = useI18n()
+  const c = t.common
   return (
     <div className="grid gap-3 rounded-xl bg-(--card) p-6">
       <span className="font-latin text-[22px] leading-6 tracking-[.03em] text-accent">BASIC</span>
       <div className="flex flex-wrap items-baseline gap-1.5">
+        {c.priceBefore && <span className="text-lg font-bold">{c.priceBefore}</span>}
         <b className="text-[40px] leading-[44px] font-extrabold tracking-tight">{PRICE_FROM}</b>
-        <span className="text-lg font-bold">₾-დან</span>
-        <small className="text-sm text-ink-2">/ თვე</small>
+        <span className="text-lg font-bold">{c.priceAfter}</span>
+        <small className="text-sm text-ink-2">{c.perMonth}</small>
       </div>
-      <p className="text-[13px] leading-5 text-ink-2">ფასი ერთ ობიექტზე. საბოლოო თანხას ვაზუსტებთ აღწერისას, ობიექტის ზომისა და დანადგარების რაოდენობის მიხედვით.</p>
-      <Button to="/contact/" className="w-full">მოითხოვეთ შეფასება</Button>
+      <p className="text-[13px] leading-5 text-ink-2">{c.priceNote}</p>
+      <Button to="/contact/" className="w-full">{c.request}</Button>
     </div>
   )
 }

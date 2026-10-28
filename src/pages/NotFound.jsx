@@ -1,11 +1,14 @@
 import { Button, PageHead, Section, usePageTitle } from '../components/ui.jsx'
+import { useI18n } from '../i18n/index.jsx'
 
 export default function NotFound() {
-  usePageTitle('გვერდი ვერ მოიძებნა')
+  usePageTitle('notFound')
+  const { t } = useI18n()
+  const n = t.notFound
   return (
     <>
-      <PageHead kicker="404" title="გვერდი ვერ მოიძებნა" lead="ბმული შეიძლება შეიცვალა. დაბრუნდით მთავარ გვერდზე." />
-      <Section label="ბმულები"><Button to="/">მთავარი გვერდი</Button></Section>
+      <PageHead kicker={n.kicker} title={n.title} lead={n.lead} />
+      <Section label={n.label}><Button to="/">{n.home}</Button></Section>
     </>
   )
 }

@@ -1,32 +1,25 @@
 import Icon from '../components/Icon.jsx'
 import { Button, Card, CardText, CardTitle, CtaBand, Grid, Kicker, Lead, More, PricePlate, Role, SecHead, Section, usePageTitle } from '../components/ui.jsx'
-import { DIGITAL, PRICE_FROM, ROLES, SERVICES } from '../content.js'
 import Steps from '../components/Steps.jsx'
+import { DIGITAL_ICONS, SERVICE_IDS } from '../content.js'
+import { useI18n } from '../i18n/index.jsx'
 
 function Hero() {
-  const facts = [
-    ['2019', 'წლიდან ვემსახურებით ბიზნესებს'],
-    [`${PRICE_FROM} ₾`, 'დან, თვეში, ერთ ობიექტზე'],
-    ['1 ვიზიტი', 'გეგმიურად ყოველ თვეში'],
-  ]
+  const { t } = useI18n()
+  const h = t.home
   return (
     <section aria-labelledby="hero-title" className="relative overflow-hidden bg-navy py-12 text-on-navy [--focus:#fff] md:py-16">
       <div className="wrap relative z-10">
         <div className="max-w-[640px]">
-          <Kicker onNavy>საინჟინრო მომსახურება · 2019 წლიდან</Kicker>
-          <h1 id="hero-title" className="text-[28px] leading-9 font-extrabold tracking-[-.01em] md:text-4xl md:leading-[44px]">
-            თქვენი ობიექტის საინჟინრო სისტემები — ერთ პასუხისმგებელ გუნდთან
-          </h1>
-          <Lead onNavy>
-            ელექტროობა, გათბობა-გაგრილება და გენერატორი სასტუმროებისთვის, მაღაზიებისთვის, კაფეებისა და რესტორნებისთვის.
-            ფიქსირებული თვიური ფასი, გეგმიური ვიზიტები და ციფრული პორტალი, სადაც ყველა დანადგარი და ყველა სამუშაო ჩანს.
-          </Lead>
+          <Kicker onNavy>{h.kicker}</Kicker>
+          <h1 id="hero-title" className="text-[28px] leading-9 font-extrabold tracking-[-.01em] md:text-4xl md:leading-[44px]">{h.title}</h1>
+          <Lead onNavy>{h.lead}</Lead>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Button to="/contact/" className="w-full sm:w-auto">მოითხოვეთ შეფასება <Icon name="arrow" className="size-[18px]" /></Button>
-            <Button to="/pricing/" variant="navy" className="w-full sm:w-auto">რა შედის და რა ღირს</Button>
+            <Button to="/contact/" className="w-full sm:w-auto">{t.common.request} <Icon name="arrow" className="size-[18px]" /></Button>
+            <Button to="/pricing/" variant="navy" className="w-full sm:w-auto">{h.secondary}</Button>
           </div>
           <dl className="mt-9 grid grid-cols-1 gap-3 pt-6 shadow-[inset_0_1px_0_rgba(255,255,255,.16)] sm:grid-cols-3 sm:gap-4">
-            {facts.map(([dt, dd]) => (
+            {h.facts.map(([dt, dd]) => (
               <div key={dt} className="flex items-baseline gap-3 sm:block">
                 <dt className="text-[22px] leading-7 font-extrabold whitespace-nowrap">{dt}</dt>
                 <dd className="text-[13px] leading-5 text-on-navy-2 sm:mt-1">{dd}</dd>
@@ -41,40 +34,42 @@ function Hero() {
 }
 
 export default function Home() {
-  usePageTitle('')
+  usePageTitle('home')
+  const { t } = useI18n()
+  const h = t.home
   return (
     <>
       <Hero />
 
       <Section band labelledBy="dig-title">
-        <SecHead kicker="ციფრული სერვისები" title="ყველაფერი, რაც თქვენს ობიექტზე ხდება — ონლაინ" id="dig-title" more={<More to="/digital/">ყველა შესაძლებლობა</More>}>
-          <Lead>Helpdesk, ინვენტარი, ანგარიშები და ისტორია ერთ პორტალში. წვდომა გაქვთ თქვენც და თქვენს გუნდსაც.</Lead>
+        <SecHead kicker={h.digKicker} title={h.digTitle} id="dig-title" more={<More to="/digital/">{h.digMore}</More>}>
+          <Lead>{h.digLead}</Lead>
         </SecHead>
         <Grid cols={4}>
-          {DIGITAL.slice(0, 4).map((d) => (
-            <Card key={d.title}><Icon name={d.icon} className="size-7 text-accent" /><CardTitle>{d.title}</CardTitle><CardText>{d.text}</CardText></Card>
+          {t.digital.slice(0, 4).map((d, i) => (
+            <Card key={d.title}><Icon name={DIGITAL_ICONS[i]} className="size-7 text-accent" /><CardTitle>{d.title}</CardTitle><CardText>{d.text}</CardText></Card>
           ))}
         </Grid>
       </Section>
 
       <Section labelledBy="who-title">
-        <SecHead kicker="ვისთვის" title="მათთვის, ვინც ობიექტზე პასუხისმგებელია" id="who-title" more={<More to="/who/">დაწვრილებით</More>} />
+        <SecHead kicker={h.whoKicker} title={h.whoTitle} id="who-title" more={<More to="/who/">{t.common.more}</More>} />
         <Grid>
-          {ROLES.map((r) => (
+          {t.roles.map((r) => (
             <Card key={r.role}><Role>{r.role}</Role><CardTitle>{r.title}</CardTitle><CardText>{r.short}</CardText></Card>
           ))}
         </Grid>
       </Section>
 
       <Section band labelledBy="svc-title">
-        <SecHead kicker="სერვისები" title="სამი მიმართულება, ერთი გუნდი" id="svc-title" more={<More to="/services/">ყველა სერვისი</More>} />
+        <SecHead kicker={h.svcKicker} title={h.svcTitle} id="svc-title" more={<More to="/services/">{h.svcMore}</More>} />
         <Grid>
-          {SERVICES.map((s) => (
-            <Card key={s.id} to={{ pathname: '/services/', hash: `#${s.id}` }}>
-              <Icon name={s.icon} className="size-7 text-accent" />
+          {t.services.map((s, i) => (
+            <Card key={SERVICE_IDS[i].id} to={{ pathname: '/services/', hash: `#${SERVICE_IDS[i].id}` }}>
+              <Icon name={SERVICE_IDS[i].icon} className="size-7 text-accent" />
               <CardTitle>{s.name}</CardTitle>
               <CardText>{s.short}</CardText>
-              <span className="mt-auto inline-flex items-center gap-1.5 pt-1.5 text-sm font-semibold text-accent">დაწვრილებით <Icon name="arrow" className="size-4" /></span>
+              <span className="mt-auto inline-flex items-center gap-1.5 pt-1.5 text-sm font-semibold text-accent">{t.common.more} <Icon name="arrow" className="size-4" /></span>
             </Card>
           ))}
         </Grid>
@@ -85,14 +80,12 @@ export default function Home() {
       <Section band labelledBy="price-title">
         <div className="grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,360px)] md:gap-12">
           <div>
-            <Kicker>ფასი</Kicker>
-            <h2 id="price-title" className="text-[22px] leading-[30px] font-extrabold md:text-[26px] md:leading-[34px]">ერთი პაკეტი, ფასი ობიექტის ზომით</h2>
+            <Kicker>{h.priceKicker}</Kicker>
+            <h2 id="price-title" className="text-[22px] leading-[30px] font-extrabold md:text-[26px] md:leading-[34px]">{h.priceTitle}</h2>
             <ul className="mt-5 grid list-disc gap-1.5 pl-5 text-ink-2">
-              <li>თვეში 1 გეგმიური ვიზიტი</li>
-              <li>რეაგირება მოთხოვნებზე და მცირე შეკეთება</li>
-              <li>დანადგარების რეესტრი და ისტორია ონლაინ</li>
+              {h.priceBullets.map((b) => <li key={b}>{b}</li>)}
             </ul>
-            <p className="mt-5"><More to="/pricing/">რა შედის და რა არა</More></p>
+            <p className="mt-5"><More to="/pricing/">{h.priceMore}</More></p>
           </div>
           <PricePlate />
         </div>
