@@ -34,11 +34,14 @@ export const SERVICE_IDS = [
 export const DIGITAL_ICONS = ['ticket', 'box', 'chart', 'image', 'history', 'shield', 'calendar', 'users']
 
 // Same order as t.teamPage.photos.
-export const PHOTOS = ['assets/photos/install-camera-800.jpg', 'assets/photos/install-workstation-800.jpg', 'assets/photos/install-ladder-800.jpg']
+export const PHOTOS = ['assets/photos/install-camera-800.jpg', 'assets/photos/install-workstation-800.jpg', 'assets/photos/install-ladder-800.jpg', 'assets/photos/engineer-phone-800.jpg']
+
+// The team on site (client banners in the background are blurred).
+export const TEAM_PHOTO = 'assets/photos/team-site-800.jpg'
 
 // The lead endpoint accepts these Georgian values whatever language the form is shown in;
 // same order as t.form.types.
 export const FORM_TYPES = ['სასტუმრო', 'მაღაზია', 'კაფე', 'რესტორანი', 'ოფისი', 'სხვა']
 
 // Short silent loops from our jobs, without the .mp4/.jpg extension; same order as t.work.clips.
-export const VIDEOS = ['assets/video/laser', 'assets/video/team-mount', 'assets/video/tv-result', 'assets/video/corridor']
+export const VIDEOS = ['assets/video/lift', 'assets/video/laser', 'assets/video/scissor-lift', 'assets/video/corridor', 'assets/video/team-mount', 'assets/video/warehouse', 'assets/video/fiber', 'assets/video/tv-result']

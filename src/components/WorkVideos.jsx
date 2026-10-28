@@ -34,7 +34,8 @@ function Clip({ src, caption }) {
   )
 }
 
-export default function WorkVideos({ band, more }) {
+// `limit` shows only the first clips (the home page uses four).
+export default function WorkVideos({ band, more, limit }) {
   const { t } = useI18n()
   const w = t.work
   return (
@@ -43,7 +44,7 @@ export default function WorkVideos({ band, more }) {
         <Lead>{w.lead}</Lead>
       </SecHead>
       <div className="mt-8 grid max-w-[880px] grid-cols-2 gap-4 md:grid-cols-4">
-        {VIDEOS.map((src, i) => <Clip key={src} src={src} caption={w.clips[i]} />)}
+        {VIDEOS.slice(0, limit).map((src, i) => <Clip key={src} src={src} caption={w.clips[i]} />)}
       </div>
     </Section>
   )

@@ -53,6 +53,7 @@ export default {
   },
 
   pillars: {
+    photoAlt: 'Four Teki.GE engineers in hard hats and hi-vis vests outside a building under construction',
     kicker: 'What we do', title: 'Engineering management, equipment records and service',
     items: [
       { title: 'Engineering management', text: 'We plan the work, manage subcontractors and keep deadlines and costs under control. You deal with one accountable team.' },
@@ -164,9 +165,9 @@ export default {
 
   work: {
     kicker: 'At work', title: 'How we work on site',
-    lead: 'Real footage from our jobs: laser-guided installation, teamwork and the finished result.',
+    lead: 'Real footage from our sites: hotels, warehouses, work at height and fibre networks.',
     more: 'Team',
-    clips: ['Marking and mounting with a laser level', 'Two engineers on one job', 'Result: TV mounted on the wall', 'Hotel corridor: lighting and exit signs'],
+    clips: ['Running cable from a bucket lift', 'Marking and mounting with a laser level', 'Warehouse installation from a scissor lift', 'Hotel corridor: lighting and exit signs', 'Two engineers on one job', 'Cable routes in a warehouse', 'Fibre-optic splicing', 'Result: TV mounted on the wall'],
   },
 
   teamPage: {
@@ -176,10 +177,12 @@ export default {
     workKicker: 'At work', workTitle: 'One team for every discipline',
     workLead: 'One accountable team plans visits, answers requests and manages subcontractors.',
     since: 'since',
+    groupAlt: 'Four Teki.GE engineers in hard hats and hi-vis vests outside a building under construction',
     photos: [
       { alt: 'An engineer installing equipment on a ceiling', caption: 'Installation in a hotel interior' },
       { alt: 'An engineer setting up a workstation at a reception desk', caption: 'Setting up a workstation' },
       { alt: 'An engineer on a ladder installing equipment near the ceiling', caption: 'Ceiling installation' },
+      { alt: 'An engineer in a hard hat checking data on a phone', caption: 'On site: data on the phone' },
     ],
   },
 

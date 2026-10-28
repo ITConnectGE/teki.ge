@@ -84,7 +84,7 @@ export default function Home() {
 
       <Steps band />
 
-      <WorkVideos more />
+      <WorkVideos more limit={4} />
 
       <Section band labelledBy="price-title">
         <div className="grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,360px)] md:gap-12">

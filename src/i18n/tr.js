@@ -53,6 +53,7 @@ export default {
   },
 
   pillars: {
+    photoAlt: 'Baretli ve yelekli dört Teki.GE mühendisi, inşaat halindeki bir binanın önünde',
     kicker: 'Ne yapıyoruz', title: 'Teknik yönetim, ekipman kaydı ve bakım',
     items: [
       { title: 'Teknik yönetim', text: 'İşleri planlar, alt yüklenicileri yönetir, süreleri ve maliyeti kontrol ederiz. Tek bir sorumlu ekiple çalışırsınız.' },
@@ -164,9 +165,9 @@ export default {
 
   work: {
     kicker: 'İş başında', title: 'Sahada nasıl çalışıyoruz',
-    lead: 'İşlerimizden gerçek görüntüler: lazerle montaj, ekip çalışması ve sonuç.',
+    lead: 'Sahalarımızdan gerçek görüntüler: oteller, depolar, yüksekte çalışma ve fiber ağlar.',
     more: 'Ekip',
-    clips: ['Lazer hizalayıcıyla işaretleme ve montaj', 'Tek işte iki mühendis', 'Sonuç: duvara monte edilmiş TV', 'Otel koridoru: aydınlatma ve acil çıkış işaretleri'],
+    clips: ['Sepetli platformdan kablo çekimi', 'Lazer hizalayıcıyla işaretleme ve montaj', 'Makaslı platformla depoda montaj', 'Otel koridoru: aydınlatma ve acil çıkış işaretleri', 'Tek işte iki mühendis', 'Depoda kablo güzergâhları', 'Fiber optik kablo ekleme', 'Sonuç: duvara monte edilmiş TV'],
   },
 
   teamPage: {
@@ -176,10 +177,12 @@ export default {
     workKicker: 'İş başında', workTitle: 'Tüm alanlar için tek ekip',
     workLead: 'Tek sorumlu ekip ziyaretleri planlar, taleplere yanıt verir ve alt yüklenicileri yönetir.',
     since: 'yılından beri',
+    groupAlt: 'Baretli ve yelekli dört Teki.GE mühendisi, inşaat halindeki bir binanın önünde',
     photos: [
       { alt: 'Tavana ekipman monte eden bir mühendis', caption: 'Otel iç mekânında montaj' },
       { alt: 'Resepsiyonda çalışma alanı kuran bir mühendis', caption: 'Çalışma alanı kurulumu' },
       { alt: 'Merdiven üzerinde tavana ekipman monte eden bir mühendis', caption: 'Tavan montajı' },
+      { alt: 'Baretli bir mühendis telefonda verileri kontrol ediyor', caption: 'Sahada: veriler telefonda' },
     ],
   },
 
