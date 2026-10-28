@@ -185,7 +185,6 @@ export default {
       { alt: 'Baretli bir mühendis telefonda verileri kontrol ediyor', caption: 'Sahada: veriler telefonda' },
       { alt: 'Merdivendeki bir mühendis veranda tavanına kablo kanalı sabitliyor', caption: 'Kışın güvenlik kamerası montajı' },
       { alt: 'Açık elektrik panosunun yanında duvar tipi ağ kabininde çalışan iki mühendis', caption: 'Ağ kabini ve elektrik panosu' },
-      { alt: 'Merdivendeki bir mühendis kabloları duvar kabinine alıyor', caption: 'Duvar kabininde kablo sonlandırma' },
       { alt: 'Bodrumda borular boyunca kablo çeken bir mühendis', caption: 'Bodrumda kablo çekimi' },
     ],
   },

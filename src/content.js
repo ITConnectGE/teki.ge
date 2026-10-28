@@ -36,7 +36,7 @@ export const DIGITAL_ICONS = ['ticket', 'box', 'chart', 'image', 'history', 'shi
 
 // Same order as t.teamPage.photos.
 export const PHOTOS = ['assets/photos/install-camera-800.jpg', 'assets/photos/install-workstation-800.jpg', 'assets/photos/install-ladder-800.jpg', 'assets/photos/engineer-phone-800.jpg',
-  'assets/photos/camera-winter-800.jpg', 'assets/photos/cabinet-panel-800.jpg', 'assets/photos/wall-cabinet-800.jpg', 'assets/photos/basement-cable-800.jpg']
+  'assets/photos/camera-winter-800.jpg', 'assets/photos/cabinet-panel-800.jpg', 'assets/photos/basement-cable-800.jpg']
 
 // The team on site (client banners in the background are blurred).
 export const TEAM_PHOTO = 'assets/photos/team-site-800.jpg'
