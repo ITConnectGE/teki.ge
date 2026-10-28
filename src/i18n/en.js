@@ -183,6 +183,10 @@ export default {
       { alt: 'An engineer setting up a workstation at a reception desk', caption: 'Setting up a workstation' },
       { alt: 'An engineer on a ladder installing equipment near the ceiling', caption: 'Ceiling installation' },
       { alt: 'An engineer in a hard hat checking data on a phone', caption: 'On site: data on the phone' },
+      { alt: 'An engineer on a ladder fixing cable trunking to a porch ceiling', caption: 'Installing a security camera in winter' },
+      { alt: 'Two engineers at a wall network cabinet beside an open distribution board', caption: 'Network cabinet and distribution board' },
+      { alt: 'An engineer on a ladder bringing cables into a wall cabinet', caption: 'Terminating cables in a wall cabinet' },
+      { alt: 'An engineer on a step ladder running cable along pipes in a basement', caption: 'Running cable in a basement' },
     ],
   },
 
