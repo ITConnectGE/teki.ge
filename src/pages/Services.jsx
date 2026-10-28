@@ -1,6 +1,7 @@
 import Icon from '../components/Icon.jsx'
-import { Card, CardText, CardTitle, CtaBand, Grid, H2, Kicker, PageHead, Section, usePageTitle } from '../components/ui.jsx'
-import { SERVICE_IDS } from '../content.js'
+import { Card, CardText, CardTitle, CtaBand, Grid, H2, Kicker, PageHead, Section, asset, usePageTitle } from '../components/ui.jsx'
+import { SERVICE_IDS, STOCK } from '../content.js'
+import WorkVideos from '../components/WorkVideos.jsx'
 import { useI18n } from '../i18n/index.jsx'
 
 function List({ title, items }) {
@@ -29,6 +30,7 @@ export default function Services() {
               <div>
                 <h2 className="flex items-center gap-3 text-xl leading-7 font-extrabold"><Icon name={SERVICE_IDS[i].icon} className="size-6 text-accent" />{svc.name}</h2>
                 <p className="mt-2 text-sm leading-[22px] text-ink-2">{svc.sub}</p>
+                <img src={asset(STOCK.services[i])} alt={t.stock.services[i]} width="800" height="600" loading="lazy" className="mt-4 aspect-[4/3] h-auto w-full max-w-[300px] rounded-lg object-cover" />
               </div>
               <div className="grid gap-5 sm:grid-cols-2 sm:gap-7">
                 <List title={s.visit} items={svc.visit} />
@@ -38,7 +40,8 @@ export default function Services() {
           ))}
         </div>
       </Section>
-      <Section band labelledBy="all-title">
+      <WorkVideos band videos={STOCK.clips} copy={t.stock} id="stock-clips-title" />
+      <Section labelledBy="all-title">
         <Kicker>{s.allKicker}</Kicker>
         <H2 id="all-title">{s.allTitle}</H2>
         <Grid>

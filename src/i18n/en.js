@@ -170,6 +170,15 @@ export default {
     clips: ['Running cable from a bucket lift', 'Marking and mounting with a laser level', 'Warehouse installation from a scissor lift', 'Hotel corridor: lighting and exit signs', 'Two engineers on one job', 'Cable routes in a warehouse', 'Fibre-optic splicing', 'Result: TV mounted on the wall'],
   },
 
+  stock: {
+    cards: ['An electrician testing a distribution board with a multimeter', 'A technician checking an outdoor air conditioner with a manifold gauge', 'Two technicians checking a portable generator'],
+    services: ['A technician adjusting wiring in a breaker panel', 'A technician repairing an outdoor AC unit on a rooftop', 'A mechanic repairing a generator outdoors'],
+    qr: 'A woman scanning a QR code with her phone',
+    kicker: 'Types of work', title: 'The work we do',
+    lead: 'Typical jobs our service covers. Illustrative footage.',
+    clips: ['Installing electrical wiring', 'Checking a control panel', 'Backup power batteries', 'Replacing a light fitting', 'Diagnostics on a rooftop, with a laptop'],
+  },
+
   teamPage: {
     kicker: 'Team',
     title: 'Our engineers on site',
