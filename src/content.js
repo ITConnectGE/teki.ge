@@ -47,12 +47,3 @@ export const FORM_TYPES = ['სასტუმრო', 'მაღაზია', 
 
 // Short silent loops from our jobs, without the .mp4/.jpg extension; same order as t.work.clips.
 export const VIDEOS = ['assets/video/lift', 'assets/video/laser', 'assets/video/scissor-lift', 'assets/video/corridor', 'assets/video/team-mount', 'assets/video/warehouse', 'assets/video/fiber', 'assets/video/tv-result']
-
-// Free Pexels stock (see README for sources). Illustrative only: never in the team gallery or the
-// "our sites" clips, so nobody reads them as TEKI's own people or jobs.
-export const STOCK = {
-  cards: ['assets/stock/electric-card.jpg', 'assets/stock/hvac-card.jpg', 'assets/stock/generator-card.jpg'],
-  services: ['assets/stock/electric-service.jpg', 'assets/stock/hvac-service.jpg', 'assets/stock/generator-service.jpg'],
-  qr: 'assets/stock/qr-scan.jpg',
-  clips: ['assets/stock/clip-wiring', 'assets/stock/clip-control-panel', 'assets/stock/clip-battery-bank', 'assets/stock/clip-light', 'assets/stock/clip-rooftop'],
-}

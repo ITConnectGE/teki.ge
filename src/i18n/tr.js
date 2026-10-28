@@ -170,15 +170,6 @@ export default {
     clips: ['Sepetli platformdan kablo çekimi', 'Lazer hizalayıcıyla işaretleme ve montaj', 'Makaslı platformla depoda montaj', 'Otel koridoru: aydınlatma ve acil çıkış işaretleri', 'Tek işte iki mühendis', 'Depoda kablo güzergâhları', 'Fiber optik kablo ekleme', 'Sonuç: duvara monte edilmiş TV'],
   },
 
-  stock: {
-    cards: ['Elektrik panosunu multimetreyle test eden bir elektrikçi', 'Dış ünite klimayı manometreyle kontrol eden bir teknisyen', 'Portatif jeneratörü kontrol eden iki teknisyen'],
-    services: ['Sigorta panosunda kabloları düzenleyen bir teknisyen', 'Çatıda klima dış ünitesini onaran bir teknisyen', 'Dışarıda jeneratör onaran bir usta'],
-    qr: 'Telefonuyla QR kod tarayan bir kadın',
-    kicker: 'İş türleri', title: 'Yaptığımız işler',
-    lead: 'Hizmetimizin kapsadığı tipik işler. Temsili görüntüler.',
-    clips: ['Elektrik tesisatı montajı', 'Kontrol panosunun kontrolü', 'Yedek güç aküleri', 'Aydınlatma armatürü değişimi', 'Çatıda dizüstü bilgisayarla arıza tespiti'],
-  },
-
   teamPage: {
     kicker: 'Ekip',
     title: 'Mühendislerimiz sahada',

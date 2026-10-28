@@ -1,10 +1,10 @@
 import Icon from '../components/Icon.jsx'
-import { Button, Card, asset, CardText, CardTitle, CtaBand, Grid, Kicker, Lead, More, PricePlate, Role, SecHead, Section, usePageTitle } from '../components/ui.jsx'
+import { Button, Card, CardText, CardTitle, CtaBand, Grid, Kicker, Lead, More, PricePlate, Role, SecHead, Section, usePageTitle } from '../components/ui.jsx'
 import Steps from '../components/Steps.jsx'
 import WorkVideos from '../components/WorkVideos.jsx'
 import Pillars from '../components/Pillars.jsx'
 import QrSection from '../components/QrSection.jsx'
-import { DIGITAL_ICONS, SERVICE_IDS, STOCK } from '../content.js'
+import { DIGITAL_ICONS, SERVICE_IDS } from '../content.js'
 import { useI18n } from '../i18n/index.jsx'
 
 function Hero() {
@@ -72,14 +72,11 @@ export default function Home() {
         <SecHead kicker={h.svcKicker} title={h.svcTitle} id="svc-title" more={<More to="/services/">{h.svcMore}</More>} />
         <Grid>
           {t.services.map((s, i) => (
-            <Card key={SERVICE_IDS[i].id} to={{ pathname: '/services/', hash: `#${SERVICE_IDS[i].id}` }} className="overflow-hidden !p-0">
-              <img src={asset(STOCK.cards[i])} alt={t.stock.cards[i]} width="800" height="600" loading="lazy" className="aspect-[4/3] h-auto w-full object-cover" />
-              <div className="flex flex-1 flex-col gap-2 p-6">
-                <Icon name={SERVICE_IDS[i].icon} className="size-7 text-accent" />
-                <CardTitle>{s.name}</CardTitle>
-                <CardText>{s.short}</CardText>
-                <span className="mt-auto inline-flex items-center gap-1.5 pt-1.5 text-sm font-semibold text-accent">{t.common.more} <Icon name="arrow" className="size-4" /></span>
-              </div>
+            <Card key={SERVICE_IDS[i].id} to={{ pathname: '/services/', hash: `#${SERVICE_IDS[i].id}` }}>
+              <Icon name={SERVICE_IDS[i].icon} className="size-7 text-accent" />
+              <CardTitle>{s.name}</CardTitle>
+              <CardText>{s.short}</CardText>
+              <span className="mt-auto inline-flex items-center gap-1.5 pt-1.5 text-sm font-semibold text-accent">{t.common.more} <Icon name="arrow" className="size-4" /></span>
             </Card>
           ))}
         </Grid>

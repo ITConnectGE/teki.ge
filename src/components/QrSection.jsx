@@ -1,6 +1,5 @@
 import Icon from './Icon.jsx'
-import { Dia, H2, Kicker, Lead, Section, asset } from './ui.jsx'
-import { STOCK } from '../content.js'
+import { Dia, H2, Kicker, Lead, Section } from './ui.jsx'
 import { useI18n } from '../i18n/index.jsx'
 
 // A QR-looking pattern for the sample unit card. It is an illustration and does not scan.
@@ -78,7 +77,6 @@ export default function QrSection({ band }) {
               </li>
             ))}
           </ol>
-          <img src={asset(STOCK.qr)} alt={t.stock.qr} width="800" height="600" loading="lazy" className="mt-6 aspect-[4/3] h-auto w-full max-w-[380px] rounded-xl object-cover" />
         </div>
         <SampleCard />
       </div>

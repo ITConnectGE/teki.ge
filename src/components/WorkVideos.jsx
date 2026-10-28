@@ -34,18 +34,17 @@ function Clip({ src, caption }) {
   )
 }
 
-// `limit` shows only the first clips (the home page uses four). `videos` and `copy` swap in another
-// set, such as the illustrative stock clips on the services page.
-export default function WorkVideos({ band, more, limit, videos = VIDEOS, copy, id = 'work-title' }) {
+// `limit` shows only the first clips (the home page uses four).
+export default function WorkVideos({ band, more, limit }) {
   const { t } = useI18n()
-  const w = copy ?? t.work
+  const w = t.work
   return (
-    <Section band={band} labelledBy={id}>
-      <SecHead kicker={w.kicker} title={w.title} id={id} more={more && <More to="/team/">{w.more}</More>}>
+    <Section band={band} labelledBy="work-title">
+      <SecHead kicker={w.kicker} title={w.title} id="work-title" more={more && <More to="/team/">{w.more}</More>}>
         <Lead>{w.lead}</Lead>
       </SecHead>
-      <div className={`mt-8 grid grid-cols-2 gap-4 ${videos.slice(0, limit).length === 5 ? 'max-w-[1100px] md:grid-cols-5' : 'max-w-[880px] md:grid-cols-4'}`}>
-        {videos.slice(0, limit).map((src, i) => <Clip key={src} src={src} caption={w.clips[i]} />)}
+      <div className="mt-8 grid max-w-[880px] grid-cols-2 gap-4 md:grid-cols-4">
+        {VIDEOS.slice(0, limit).map((src, i) => <Clip key={src} src={src} caption={w.clips[i]} />)}
       </div>
     </Section>
   )
