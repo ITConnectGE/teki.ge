@@ -2,6 +2,8 @@ import Icon from '../components/Icon.jsx'
 import { Button, Card, CardText, CardTitle, CtaBand, Grid, Kicker, Lead, More, PricePlate, Role, SecHead, Section, usePageTitle } from '../components/ui.jsx'
 import Steps from '../components/Steps.jsx'
 import WorkVideos from '../components/WorkVideos.jsx'
+import Pillars from '../components/Pillars.jsx'
+import QrSection from '../components/QrSection.jsx'
 import { DIGITAL_ICONS, SERVICE_IDS } from '../content.js'
 import { useI18n } from '../i18n/index.jsx'
 
@@ -11,7 +13,7 @@ function Hero() {
   return (
     <section aria-labelledby="hero-title" className="relative overflow-hidden bg-navy py-12 text-on-navy [--focus:#fff] md:py-16">
       <div className="wrap relative z-10">
-        <div className="max-w-[640px]">
+        <div className="max-w-[680px]">
           <Kicker onNavy>{h.kicker}</Kicker>
           <h1 id="hero-title" className="text-[28px] leading-9 font-extrabold tracking-[-.01em] md:text-4xl md:leading-[44px]">{h.title}</h1>
           <Lead onNavy>{h.lead}</Lead>
@@ -19,7 +21,7 @@ function Hero() {
             <Button to="/contact/" className="w-full sm:w-auto">{t.common.request} <Icon name="arrow" className="size-[18px]" /></Button>
             <Button to="/pricing/" variant="navy" className="w-full sm:w-auto">{h.secondary}</Button>
           </div>
-          <dl className="mt-9 grid grid-cols-1 gap-3 pt-6 shadow-[inset_0_1px_0_rgba(255,255,255,.16)] sm:grid-cols-3 sm:gap-4">
+          <dl className="mt-9 grid grid-cols-1 gap-3 pt-6 shadow-[inset_0_1px_0_rgba(255,255,255,.16)] sm:grid-cols-4 sm:gap-4">
             {h.facts.map(([dt, dd]) => (
               <div key={dt} className="flex items-baseline gap-3 sm:block">
                 <dt className="text-[22px] leading-7 font-extrabold whitespace-nowrap">{dt}</dt>
@@ -42,7 +44,11 @@ export default function Home() {
     <>
       <Hero />
 
-      <Section band labelledBy="dig-title">
+      <Pillars />
+
+      <QrSection band />
+
+      <Section labelledBy="dig-title">
         <SecHead kicker={h.digKicker} title={h.digTitle} id="dig-title" more={<More to="/digital/">{h.digMore}</More>}>
           <Lead>{h.digLead}</Lead>
         </SecHead>
@@ -53,7 +59,7 @@ export default function Home() {
         </Grid>
       </Section>
 
-      <Section labelledBy="who-title">
+      <Section band labelledBy="who-title">
         <SecHead kicker={h.whoKicker} title={h.whoTitle} id="who-title" more={<More to="/who/">{t.common.more}</More>} />
         <Grid>
           {t.roles.map((r) => (
@@ -62,7 +68,7 @@ export default function Home() {
         </Grid>
       </Section>
 
-      <Section band labelledBy="svc-title">
+      <Section labelledBy="svc-title">
         <SecHead kicker={h.svcKicker} title={h.svcTitle} id="svc-title" more={<More to="/services/">{h.svcMore}</More>} />
         <Grid>
           {t.services.map((s, i) => (
@@ -76,11 +82,11 @@ export default function Home() {
         </Grid>
       </Section>
 
-      <Steps />
+      <Steps band />
 
-      <WorkVideos band more />
+      <WorkVideos more />
 
-      <Section labelledBy="price-title">
+      <Section band labelledBy="price-title">
         <div className="grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,360px)] md:gap-12">
           <div>
             <Kicker>{h.priceKicker}</Kicker>

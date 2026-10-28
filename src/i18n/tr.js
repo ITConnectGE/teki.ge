@@ -32,11 +32,11 @@ export default {
   fab: { open: 'Bize ulaşın', close: 'Kapat', call: 'Arayın', email: 'E-posta', form: 'Değerlendirme isteyin' },
 
   home: {
-    kicker: 'Teknik bakım · 2019’dan beri',
+    kicker: 'Teknik yönetim · 2019’dan beri',
     title: 'Tesisinizin teknik sistemleri — tek sorumlu ekiple',
-    lead: 'Oteller, ofisler, mağazalar, kafeler ve restoranlar için elektrik, ısıtma-soğutma ve jeneratör. Sabit aylık ücret, planlı ziyaretler ve her ekipmanın, her işin görüldüğü dijital portal.',
+    lead: 'Oteller, ofisler, mağazalar, kafeler ve restoranlar için elektrik, ısıtma-soğutma ve jeneratör. İşleri yönetir, her ekipmanı kayda alır ve sabit aylık ücretle bakımını yaparız. Her ekipmanın QR kodu var: tarayın, geçmişini görün.',
     secondary: 'Neler dahil, fiyatı ne',
-    facts: [['2019', 'yılından beri işletmelere hizmet'], [`${P} ₾’den`, 'başlayan fiyat, aylık, tesis başına'], ['1 ziyaret', 'her ay planlı']],
+    facts: [['2019', 'yılından beri işletmelere hizmet'], ['QR', 'kod her ekipmanda'], [`${P} ₾’den`, 'başlayan fiyat, aylık, tesis başına'], ['1 ziyaret', 'her ay planlı']],
     digKicker: 'Dijital hizmetler',
     digTitle: 'Tesisinizde olan her şey — çevrimiçi',
     digLead: 'Helpdesk, envanter, raporlar ve geçmiş tek portalda. Hem siz hem ekibiniz erişebilir.',
@@ -52,9 +52,27 @@ export default {
     priceMore: 'Neler dahil, neler değil',
   },
 
+  pillars: {
+    kicker: 'Ne yapıyoruz', title: 'Teknik yönetim, ekipman kaydı ve bakım',
+    items: [
+      { title: 'Teknik yönetim', text: 'İşleri planlar, alt yüklenicileri yönetir, süreleri ve maliyeti kontrol ederiz. Tek bir sorumlu ekiple çalışırsınız.' },
+      { title: 'Ekipman kaydı', text: 'Her ekipman seri numarası, konumu, fotoğrafları ve garantisiyle kayıtlıdır; her birinin kendi QR kodu vardır.' },
+      { title: 'Bakım', text: 'Planlı ve çağrı üzerine ziyaretler. Her iş ekipmanın geçmişine yazılır.' },
+    ],
+  },
+
+  qr: {
+    kicker: 'QR kod', title: 'Her ekipmana kendi QR kodu',
+    lead: 'Telefonla tarayın ve ekipmanın tüm geçmişini görün: ne, ne zaman ve kim tarafından yapıldı, garanti koşulları ve bir sonraki planlı ziyaret.',
+    steps: ['Keşif sırasında her ekipmana QR etiketi yapıştırırız', 'Çalışanınız veya teknisyen telefonla tarar', 'Ekipman kartı açılır: geçmiş, fotoğraflar, garanti ve talep açma'],
+    example: 'Örnek', unit: 'Klima · 18.000 BTU', place: 'Oda 204', historyTitle: 'Ekipman geçmişi',
+    history: [['12.10', 'Planlı ziyaret: filtre temizliği'], ['03.09', 'Onarım: drenaj temizlendi'], ['15.06', 'Planlı ziyaret: çalışma modları kontrolü']],
+    warranty: 'Garanti: Mart 2027’ye kadar', next: 'Sonraki ziyaret: 12 Kasım', action: 'Talep aç', qrAlt: 'QR kod çizimi',
+  },
+
   roles: [
     { role: 'Direktörler için', title: 'Maliyet önceden belli', short: 'Sabit aylık ücret; paket dışı işler yalnızca sizin onayınızla.', points: ['Sabit aylık ücret', 'Paket dışı işler yalnızca onayınızla, fiyatı önceden belli', 'Üç alan için tek sözleşme ve tek ortak'] },
-    { role: 'Teknik müdürler için', title: 'Her ekipmanın tam resmi', short: 'Seri numaralı kayıt, ziyaret takvimi ve portalda geçmiş.', points: ['Seri numaralı ekipman kaydı', 'Planlı ziyaret takvimi ve servis geçmişi portalda', 'Alt yüklenicileri biz bulur ve yönetiriz'] },
+    { role: 'Teknik müdürler için', title: 'Her ekipmanın tam resmi', short: 'Seri numaralı kayıt, ziyaret takvimi ve portalda geçmiş.', points: ['Seri numaralı ve QR kodlu ekipman kaydı', 'Planlı ziyaret takvimi ve servis geçmişi portalda', 'Alt yüklenicileri biz bulur ve yönetiriz'] },
     { role: 'İşletme sahipleri için', title: 'İşiniz durmaz', short: 'Planlı kontroller sorunu arızadan önce yakalar.', points: ['Planlı kontroller sorunu arızadan önce yakalar', 'Taleplere müdahale ve durum takibi çevrimiçi', 'Birkaç usta yerine tek sorumlu ekip'] },
   ],
 
@@ -107,7 +125,7 @@ export default {
     title: 'İlk aramadan hizmete üç adım',
     items: [
       { title: 'Keşif ve değerlendirme', text: 'Tesisinize gelir, ekipman listesini çıkarır ve size kesin fiyat göndeririz.' },
-      { title: 'Sözleşme ve plan', text: 'Her ekipmana seri numarası verir, planlı ziyaret takvimini belirler ve size portal erişimi açarız.' },
+      { title: 'Sözleşme ve plan', text: 'Her ekipmana seri numarası ve QR kodu verir, planlı ziyaret takvimini belirler ve size portal erişimi açarız.' },
       { title: 'Hizmet', text: 'Aylık ziyaretler, taleplere müdahale ve her ekipman için eksiksiz geçmiş.' },
     ],
   },
@@ -132,7 +150,7 @@ export default {
     lead: `Basic paketi aylık ${P} GEL’den başlar. Kesin tutarı keşif sırasında belirliyoruz.`,
     scopeKicker: 'Hizmet ve fiyat', scopeTitle: 'Neleri kapsar, fiyatı ne',
     includedTitle: 'Pakete dahil',
-    included: ['Ayda 1 planlı ziyaret', 'Ekipman kaydı ve çevrimiçi izleme', 'Taleplere müdahale, portalda geçmiş', 'Küçük onarımlar (işçilik)', 'Alt yüklenicilerle koordinasyon'],
+    included: ['Ayda 1 planlı ziyaret', 'Ekipman kaydı ve her ekipmana QR kod', 'Taleplere müdahale, portalda geçmiş', 'Küçük onarımlar (işçilik)', 'Alt yüklenicilerle koordinasyon'],
     quotedTitle: 'Ayrıca, önceden teklifle',
     quoted: ['Malzeme ve parçalar', 'Büyük onarımlar', 'Montaj ve taşıma'],
     note: 'Hizmet veremediğimiz özel ekipmanları keşif sırasında ayrıca belirtiriz.',

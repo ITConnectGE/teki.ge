@@ -1,5 +1,6 @@
 import Icon from '../components/Icon.jsx'
 import { Button, Card, CardText, CardTitle, CtaBand, Grid, H2, Kicker, PageHead, Role, Section, usePageTitle } from '../components/ui.jsx'
+import QrSection from '../components/QrSection.jsx'
 import { DIGITAL_ICONS, PORTAL_URL } from '../content.js'
 import { useI18n } from '../i18n/index.jsx'
 
@@ -23,7 +24,8 @@ export default function Digital() {
           <Button href={PORTAL_URL} variant="soft" target="_blank" rel="noopener">{d.login}</Button>
         </div>
       </Section>
-      <Section band labelledBy="dig-who-title">
+      <QrSection band />
+      <Section labelledBy="dig-who-title">
         <Kicker>{d.forKicker}</Kicker>
         <H2 id="dig-who-title">{d.forTitle}</H2>
         <Grid>

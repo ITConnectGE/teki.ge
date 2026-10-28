@@ -32,11 +32,11 @@ export default {
   fab: { open: 'Contact us', close: 'Close', call: 'Call us', email: 'Email us', form: 'Request an assessment' },
 
   home: {
-    kicker: 'Engineering maintenance · since 2019',
+    kicker: 'Engineering management · since 2019',
     title: 'Your building’s engineering systems — with one accountable team',
-    lead: 'Electrical, heating and cooling and generators for hotels, offices, shops, cafés and restaurants. A fixed monthly fee, planned visits and a digital portal where every unit and every job is on record.',
+    lead: 'Electrical, heating and cooling and generators for hotels, offices, shops, cafés and restaurants. We manage the work, keep a record of every unit and service it for a fixed monthly fee. Every unit has a QR code: scan it to see its history.',
     secondary: 'What’s included and what it costs',
-    facts: [['2019', 'serving businesses since'], [`${P} ₾`, 'and up, per month, per site'], ['1 visit', 'planned every month']],
+    facts: [['2019', 'serving businesses since'], ['QR', 'code on every unit'], [`${P} ₾`, 'and up, per month, per site'], ['1 visit', 'planned every month']],
     digKicker: 'Digital services',
     digTitle: 'Everything that happens at your site — online',
     digLead: 'Helpdesk, inventory, reports and history in one portal. You and your team have access.',
@@ -52,9 +52,27 @@ export default {
     priceMore: 'What is and isn’t included',
   },
 
+  pillars: {
+    kicker: 'What we do', title: 'Engineering management, equipment records and service',
+    items: [
+      { title: 'Engineering management', text: 'We plan the work, manage subcontractors and keep deadlines and costs under control. You deal with one accountable team.' },
+      { title: 'Equipment records', text: 'Every unit is recorded with its serial number, location, photos and warranty, and has its own QR code.' },
+      { title: 'Service', text: 'Planned and call-out visits. Every job is written into the unit’s history.' },
+    ],
+  },
+
+  qr: {
+    kicker: 'QR code', title: 'Every unit gets its own QR code',
+    lead: 'Scan it with a phone to see the unit’s full history: what was done, when and by whom, the warranty terms and the next planned visit.',
+    steps: ['We put a QR sticker on every unit during the survey', 'Your staff or a technician scans it with a phone', 'The unit’s card opens: history, photos, warranty and a button to open a request'],
+    example: 'Example', unit: 'Air conditioner · 18,000 BTU', place: 'Room 204', historyTitle: 'Unit history',
+    history: [['12.10', 'Planned visit: filter cleaning'], ['03.09', 'Repair: drain cleared'], ['15.06', 'Planned visit: operating modes checked']],
+    warranty: 'Warranty: until March 2027', next: 'Next visit: 12 November', action: 'Open a request', qrAlt: 'Illustration of a QR code',
+  },
+
   roles: [
     { role: 'For directors', title: 'Costs known in advance', short: 'A fixed monthly fee; work outside the package only with your approval.', points: ['A fixed monthly fee', 'Work outside the package only with your approval, priced in advance', 'One contract and one partner for all three disciplines'] },
-    { role: 'For engineering managers', title: 'The full picture on every unit', short: 'A register with serial numbers, a visit schedule and history in the portal.', points: ['Equipment register with serial numbers', 'Planned visit schedule and service history in the portal', 'We find and manage subcontractors'] },
+    { role: 'For engineering managers', title: 'The full picture on every unit', short: 'A register with serial numbers, a visit schedule and history in the portal.', points: ['Equipment register with serial numbers and QR codes', 'Planned visit schedule and service history in the portal', 'We find and manage subcontractors'] },
     { role: 'For owners', title: 'Business keeps running', short: 'Planned checks catch problems before they become breakdowns.', points: ['Planned checks catch problems before breakdowns', 'Response to requests and status online', 'One accountable team instead of several handymen'] },
   ],
 
@@ -107,7 +125,7 @@ export default {
     title: 'Three steps from the first call to service',
     items: [
       { title: 'Survey and assessment', text: 'We visit your site, list the equipment and send you an exact price.' },
-      { title: 'Contract and plan', text: 'We give every unit a serial number, set the planned visit schedule and give you portal access.' },
+      { title: 'Contract and plan', text: 'We give every unit a serial number and a QR code, set the planned visit schedule and give you portal access.' },
       { title: 'Service', text: 'Monthly visits, response to requests and a full history for every unit.' },
     ],
   },
@@ -132,7 +150,7 @@ export default {
     lead: `The Basic package starts from ${P} GEL per month. We confirm the exact amount during the survey.`,
     scopeKicker: 'Service and price', scopeTitle: 'What it covers and what it costs',
     includedTitle: 'Included in the package',
-    included: ['1 planned visit a month', 'Equipment survey and online monitoring', 'Response to requests, history in the portal', 'Minor repairs (labour)', 'Coordination with subcontractors'],
+    included: ['1 planned visit a month', 'Equipment records and a QR code on every unit', 'Response to requests, history in the portal', 'Minor repairs (labour)', 'Coordination with subcontractors'],
     quotedTitle: 'Separately, with a quote in advance',
     quoted: ['Materials and parts', 'Major repairs', 'Installation and relocation'],
     note: 'Specialised equipment we can’t service is flagged separately during the survey.',

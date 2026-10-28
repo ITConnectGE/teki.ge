@@ -1,10 +1,10 @@
 import { H2, Kicker, Section } from './ui.jsx'
 import { useI18n } from '../i18n/index.jsx'
 
-export default function Steps() {
+export default function Steps({ band }) {
   const { t } = useI18n()
   return (
-    <Section labelledBy="start-title">
+    <Section band={band} labelledBy="start-title">
       <Kicker>{t.steps.kicker}</Kicker>
       <H2 id="start-title">{t.steps.title}</H2>
       <ol className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
