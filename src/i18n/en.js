@@ -119,7 +119,7 @@ export default {
     rolesLabel: 'Roles',
     typesKicker: 'Sites', typesTitle: 'Who we serve',
     types: [
-      { title: 'Small hotels', text: 'Boutique and family-run hotels. Electrical and climate in rooms, lobbies and plant rooms. We plan work so guests aren’t disturbed.' },
+      { title: 'Small hotels', text: 'Boutique and family-run hotels. Electrical and climate in rooms, lobbies and plant rooms, with planned and call-out visits. We plan work so guests aren’t disturbed.' },
       { title: 'Offices', text: 'Lighting, climate and backup power, including for the server room. We plan work so staff aren’t disrupted.' },
       { title: 'Shops', text: 'Lighting, climate and backup power. A shop shouldn’t stop during opening hours.' },
       { title: 'Cafés and restaurants', text: 'Power for the dining room and kitchen, heating and cooling and generators, planned around peak hours.' },
