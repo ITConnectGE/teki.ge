@@ -11,7 +11,8 @@ export const LEAD_ENDPOINT = ''
 
 export const PORTAL_URL = 'https://helpdesk.itconnect.ge'
 
-export const PRICE_FROM = 750
+// Shown as text, with a no-break space so the number never splits across lines.
+export const PRICE_FROM = '1 000'
 
 // Menu order; labels come from t.nav[key].
 export const NAV = [
