@@ -4,10 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Teki.GE</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Teki.GE — საინჟინრო მომსახურება სასტუმროებისთვის, მაღაზიებისთვის, კაფეებისა და რესტორნებისთვის 2019 წლიდან: ელექტროობა, გათბობა-გაგრილება, გენერატორი. ფიქსირებული თვიური ფასი, გეგმიური ვიზიტები, ყველა დანადგარის ისტორია ონლაინ.">
-<meta property="og:title" content="Teki.GE — საინჟინრო მომსახურება">
-<meta property="og:description" content="ელექტროობა, გათბობა-გაგრილება, გენერატორი — ერთი პარტნიორი, ფიქსირებული თვიური ფასი. 2019 წლიდან.">
+<meta property="og:title" content="Teki.GE">
+<meta property="og:description" content="Teki.GE — საინჟინრო მომსახურება სასტუმროებისთვის, მაღაზიებისთვის, კაფეებისა და რესტორნებისთვის 2019 წლიდან: ელექტროობა, გათბობა-გაგრილება, გენერატორი. ფიქსირებული თვიური ფასი, გეგმიური ვიზიტები, ყველა დანადგარის ისტორია ონლაინ.">
 <meta property="og:url" content="https://teki.ge/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ka_GE">
@@ -19,211 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&family=Squada+One&display=swap">
-<style>
-  /* Layout: a short page for the people who sign the contract. Deep-navy hero with a field photo,
-     then who it is for, what it covers and costs, how we start, the team, and the form. */
-  :root {
-    --bg: #ffffff; --bg-2: #f2f4f7; --plate: #eef1f5; --plate-edge: #c9d1db;
-    --ink: #14202e; --ink-2: #4b5a6b; --line: #d9dee5; --line-strong: #7a8797;
-    --navy-deep: #1b2b3f; --on-deep: #ffffff; --on-deep-2: #c2cedc;
-    --red: #e51b23; --red-ink: #c4121a; --red-hover: #a50f16; --red-soft: #fde7e8;
-    --ok: #1b6e3c; --ok-soft: #e2f4e9;
-    --focus: #364f6b;
-    --font: "Noto Sans Georgian", "Noto Sans", system-ui, sans-serif;
-    --latin: "Squada One", "Noto Sans Georgian", system-ui, sans-serif;
-    --r-md: 8px; --r-lg: 12px;
-    --shadow: 0 1px 2px rgba(20,32,46,.06), 0 8px 24px -12px rgba(20,32,46,.18);
-    --container: 1160px; --header-h: 72px;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #0d1622; --bg-2: #121e2d; --plate: #172638; --plate-edge: #2c3e55;
-      --ink: #eaf0f6; --ink-2: #a7b3c2; --line: #24344a; --line-strong: #5b6d84;
-      --navy-deep: #15253a; --on-deep: #ffffff; --on-deep-2: #c9d4e2;
-      --red-ink: #ff6b70; --red-hover: #b9141b; --red-soft: #3a1219;
-      --ok: #6fd49a; --ok-soft: #0f3020;
-      --focus: #ffffff; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #0d1622; --bg-2: #121e2d; --plate: #172638; --plate-edge: #2c3e55;
-    --ink: #eaf0f6; --ink-2: #a7b3c2; --line: #24344a; --line-strong: #5b6d84;
-    --navy-deep: #15253a; --on-deep: #ffffff; --on-deep-2: #c9d4e2;
-    --red-ink: #ff6b70; --red-hover: #b9141b; --red-soft: #3a1219;
-    --ok: #6fd49a; --ok-soft: #0f3020;
-    --focus: #ffffff; --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.6);
-    color-scheme: dark;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; }
-  [hidden] { display: none !important; }
-  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 8px); }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 26px; -webkit-font-smoothing: antialiased; }
-  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--bg); }
-  img { max-width: 100%; display: block; }
-  h1, h2, h3 { margin: 0; text-wrap: balance; }
-  p { margin: 0; }
-  a { color: inherit; }
-  :where(a, button, input, select, textarea, summary):focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-  .wrap { max-width: var(--container); margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-  @media (min-width: 720px) { .wrap { padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); } }
-  .ico { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
-  .latin { font-family: var(--latin); font-weight: 400; letter-spacing: .03em; }
-  .dia { display: inline-block; width: 8px; height: 8px; background: var(--red); border-radius: 1.5px; transform: rotate(45deg); flex: none; }
-
-  .logo-dark { display: none; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo-light { display: none; } :root:not([data-theme="light"]) .logo-dark { display: block; } }
-  :root[data-theme="dark"] .logo-light { display: none; }
-  :root[data-theme="dark"] .logo-dark { display: block; }
-
-  /* Buttons */
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 20px; border: 1px solid transparent; border-radius: var(--r-md); font: 600 15px/20px var(--font); text-decoration: none; cursor: pointer; transition: background-color .15s; white-space: nowrap; }
-  .btn-red { background: var(--red-ink); color: #fff; }
-  .btn-red:hover { background: var(--red-hover); }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-red { background: #d8161e; } }
-  :root[data-theme="dark"] .btn-red { background: #d8161e; }
-  .btn-on-deep { background: transparent; color: var(--on-deep); border-color: var(--on-deep-2); }
-  .btn-on-deep:hover { background: rgba(255,255,255,.08); }
-  .btn-lg { min-height: 52px; padding: 14px 26px; font-size: 17px; line-height: 24px; }
-  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
-
-  /* Header */
-  .header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--bg); border-bottom: 1px solid var(--line); }
-  .header .wrap { display: flex; align-items: center; gap: 28px; height: var(--header-h); }
-  .brand { display: flex; align-items: center; text-decoration: none; flex: none; }
-  .brand img { height: 42px; width: auto; }
-  .nav { display: flex; gap: 24px; flex: 1; justify-content: flex-end; }
-  .nav a { text-decoration: none; font-weight: 500; white-space: nowrap; }
-  .nav a:hover { color: var(--red-ink); }
-  @media (max-width: 860px) { .nav { display: none; } .header .wrap { justify-content: space-between; } }
-  @media (max-width: 420px) { .header .btn { padding: 10px 14px; } .brand img { height: 36px; } }
-
-  /* Sections */
-  section { padding-block: 80px; }
-  @media (max-width: 720px) { section { padding-block: 56px; } }
-  .band { background: var(--bg-2); }
-  .kicker { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px; font: 600 13px/18px var(--font); color: var(--red-ink); }
-  .h2 { font: 800 32px/40px var(--font); max-width: 760px; }
-  .lead { margin-top: 14px; font-size: 17px; line-height: 28px; color: var(--ink-2); max-width: 640px; }
-  @media (max-width: 720px) { .h2 { font-size: 26px; line-height: 34px; } }
-
-  /* Hero */
-  .hero { position: relative; overflow: hidden; background: var(--navy-deep); color: var(--on-deep); padding-block: 72px; --focus: #ffffff; }
-  .hero .wrap { position: relative; z-index: 1; }
-  .hero .wrap > div { max-width: 720px; }
-  .hero::after { content: ""; position: absolute; width: 560px; height: 560px; right: -200px; top: 50%; margin-top: -280px; background: #e51b23; border-radius: 56px; transform: rotate(45deg); }
-  .hero .kicker { color: var(--on-deep-2); }
-  .hero h1 { font: 800 46px/54px var(--font); letter-spacing: -.01em; }
-  .hero .lead { color: var(--on-deep-2); }
-  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-  .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 40px 0 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.18); }
-  .facts dt { font: 800 28px/34px var(--font); color: var(--on-deep); white-space: nowrap; }
-  .facts dd { margin: 4px 0 0; color: var(--on-deep-2); font-size: 14px; line-height: 20px; }
-  @media (max-width: 1240px) { .hero::after { width: 420px; height: 420px; right: -260px; margin-top: -210px; border-radius: 42px; } }
-  @media (max-width: 1040px) { .hero::after { display: none; } }
-  @media (max-width: 960px) { .hero h1 { font-size: 36px; line-height: 44px; } }
-  @media (max-width: 480px) { .hero { padding-block: 44px 56px; } .hero h1 { font-size: 29px; line-height: 37px; } .hero-cta .btn { width: 100%; } .facts { grid-template-columns: minmax(0, 1fr); gap: 12px; } .facts div { display: flex; align-items: baseline; gap: 12px; } .facts dd { margin: 0; } }
-
-  /* Who it is for */
-  .who { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 44px; }
-  .who article { padding-top: 22px; border-top: 3px solid var(--ink); }
-  .who .role { display: inline-flex; align-items: center; gap: 10px; font: 600 13px/18px var(--font); color: var(--red-ink); }
-  .who h3 { margin: 10px 0 14px; font: 800 22px/30px var(--font); }
-  .who ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-  .who li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; color: var(--ink-2); }
-  .who li .ico { color: var(--ok); width: 18px; height: 18px; margin-top: 4px; }
-  @media (max-width: 900px) { .who { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
-
-  /* Scope and price */
-  .services { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-  .svc { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); font-weight: 600; }
-  .svc .ico { color: var(--red-ink); }
-  .scope { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 380px); gap: 28px; margin-top: 36px; align-items: start; }
-  .scope h3 { display: flex; align-items: center; gap: 10px; font: 700 17px/24px var(--font); margin-bottom: 12px; }
-  .scope ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; color: var(--ink-2); }
-  .scope .note { margin-top: 12px; color: var(--ink-2); font-size: 14px; line-height: 22px; }
-  .c-in h3 .ico { color: var(--ok); } .c-quote h3 .ico { color: var(--red-ink); }
-  .price { position: relative; padding: 26px 26px 28px; background: var(--plate); border: 1px solid var(--plate-edge); border-top: 4px solid var(--red); border-radius: var(--r-lg); box-shadow: var(--shadow); display: grid; gap: 14px; }
-  .price .latin { font-size: 26px; line-height: 28px; }
-  .price-row { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
-  .price-row b { font: 800 52px/56px var(--font); letter-spacing: -.02em; }
-  .price-row span { font: 700 22px/28px var(--font); }
-  .price-row small { color: var(--ink-2); font-size: 15px; }
-  .price p { color: var(--ink-2); font-size: 14px; line-height: 22px; }
-  .price .btn { width: 100%; }
-  @media (max-width: 1000px) { .scope { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .price { grid-column: 1 / -1; } }
-  @media (max-width: 640px) { .scope { grid-template-columns: minmax(0, 1fr); } }
-
-  /* How we start: a real sequence */
-  .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin: 44px 0 0; padding: 0; list-style: none; counter-reset: s; }
-  .steps li { padding-top: 18px; border-top: 2px solid var(--ink); }
-  .steps li::before { counter-increment: s; content: "0" counter(s); display: block; margin-bottom: 8px; font: 800 36px/40px var(--font); letter-spacing: -.02em; color: var(--red-ink); }
-  .steps h3 { font: 700 19px/28px var(--font); margin-bottom: 6px; }
-  .steps p { color: var(--ink-2); }
-  @media (max-width: 820px) { .steps { grid-template-columns: minmax(0, 1fr); gap: 24px; } }
-
-  /* Team */
-  .team-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
-  .since { font: 800 64px/64px var(--font); letter-spacing: -.03em; color: var(--red-ink); }
-  .since small { display: block; font: 600 14px/20px var(--font); letter-spacing: 0; color: var(--ink-2); text-align: right; }
-  .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 32px; max-width: 880px; }
-  .gallery figure { margin: 0; }
-  .gallery img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-lg); }
-  .gallery figcaption { margin-top: 10px; color: var(--ink-2); font-size: 14px; line-height: 20px; }
-  @media (max-width: 760px) { .gallery { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .gallery figure:last-child { grid-column: 1 / -1; } .gallery figure:last-child img { aspect-ratio: 16 / 9; } .since { font-size: 48px; line-height: 48px; } .since small { text-align: left; } }
-
-  /* FAQ */
-  .faq { display: grid; gap: 10px; margin-top: 32px; max-width: 820px; }
-  .faq details { border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--bg); }
-  .faq summary { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 16px 22px; font-weight: 700; cursor: pointer; list-style: none; }
-  .faq summary::-webkit-details-marker { display: none; }
-  .faq summary .ico { color: var(--red-ink); transition: transform .15s; }
-  .faq details[open] summary .ico { transform: rotate(45deg); }
-  .faq details p { padding: 0 22px 18px; color: var(--ink-2); max-width: 680px; }
-  @media (prefers-reduced-motion: reduce) { .faq summary .ico { transition: none; } }
-
-  /* Contact */
-  .contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 56px; align-items: start; }
-  .contact-info { display: grid; margin-top: 28px; border-top: 2px solid var(--ink); }
-  .contact-row { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--line); }
-  .contact-row span { color: var(--ink-2); font-size: 14px; }
-  .contact-row strong { font-weight: 700; overflow-wrap: anywhere; }
-  .todo { color: var(--red-ink); }
-  .form-card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow); }
-  form.lead-form { display: grid; gap: 16px; padding: 30px; }
-  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .field { display: grid; gap: 6px; min-width: 0; align-content: start; }
-  .field label { font: 600 14px/20px var(--font); }
-  .field .opt { font-weight: 400; color: var(--ink-2); }
-  .req { color: var(--red-ink); }
-  .input { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--line-strong); border-radius: var(--r-md); background: var(--bg); color: var(--ink); font: 400 15px/22px var(--font); }
-  .input::placeholder { color: var(--ink-2); opacity: 1; }
-  .input:focus { outline: 2px solid var(--focus); outline-offset: 0; border-color: var(--focus); }
-  textarea.input { min-height: 96px; resize: vertical; }
-  select.input { appearance: none; padding-right: 40px; background-image: linear-gradient(45deg, transparent 50%, var(--ink-2) 50%), linear-gradient(135deg, var(--ink-2) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%; background-size: 5px 5px; background-repeat: no-repeat; }
-  .err { display: none; color: var(--red-ink); font-size: 13px; line-height: 20px; }
-  .field.invalid .input { border-color: var(--red-ink); }
-  .field.invalid .err { display: block; }
-  .form-note { color: var(--ink-2); font-size: 13px; line-height: 20px; }
-  .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
-  .form-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-  .notice { display: flex; gap: 12px; align-items: flex-start; padding: 16px; border-radius: var(--r-md); background: var(--ok-soft); color: var(--ink); }
-  .notice .ico { color: var(--ok); margin-top: 2px; }
-  .notice.is-error { background: var(--red-soft); }
-  .notice.is-error .ico { color: var(--red-ink); }
-  @media (max-width: 900px) { .contact { grid-template-columns: minmax(0, 1fr); gap: 36px; } }
-  @media (max-width: 560px) { .pair { grid-template-columns: minmax(0, 1fr); } form.lead-form { padding: 24px 18px; } .form-actions .btn { width: 100%; } .contact-row { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
-
-  /* Footer */
-  footer { background: var(--navy-deep); color: var(--on-deep-2); padding-block: 36px calc(28px + env(safe-area-inset-bottom, 0px)); font-size: 14px; --focus: #ffffff; }
-  footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 20px 32px; flex-wrap: wrap; }
-  footer img { height: 34px; width: auto; }
-  footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
-  footer a { text-decoration: none; }
-  footer a:hover { color: var(--on-deep); text-decoration: underline; }
-</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -235,265 +30,153 @@
     <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="M5 12h14"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
   </defs>
 </svg>
 
 <header class="header">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Teki.GE, მთავარი">
+    <a class="brand" href="" aria-label="Teki.GE, მთავარი">
       <img class="logo-light" src="assets/brand/teki-logo.svg" alt="Teki.GE" width="626" height="212">
       <img class="logo-dark" src="assets/brand/teki-logo-white.svg" alt="Teki.GE" width="626" height="212">
     </a>
     <nav class="nav" aria-label="მთავარი მენიუ">
-      <a href="#who">ვისთვის</a>
-      <a href="#scope">მომსახურება და ფასი</a>
-      <a href="#team">გუნდი</a>
-      <a href="#contact">კონტაქტი</a>
+      <a href="who/">ვისთვის</a>
+      <a href="services/">სერვისები</a>
+      <a href="pricing/">ფასი</a>
+      <a href="team/">გუნდი</a>
+      <a href="contact/">კონტაქტი</a>
     </nav>
-    <a class="btn btn-red" href="#contact">შეფასების მოთხოვნა</a>
+    <div class="header-actions">
+      <a class="btn btn-red" href="contact/">შეფასების მოთხოვნა</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="მენიუ"><svg class="ico"><use href="#i-menu"/></svg></button>
+    </div>
   </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="მენიუ" hidden>
+    <div class="wrap">
+      <a href="who/">ვისთვის</a>
+      <a href="services/">სერვისები</a>
+      <a href="pricing/">ფასი</a>
+      <a href="team/">გუნდი</a>
+      <a href="contact/">კონტაქტი</a>
+    </div>
+  </nav>
 </header>
 
-<main id="top">
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="wrap">
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <span class="kicker"><i class="dia"></i>საინჟინრო მომსახურება · 2019 წლიდან</span>
+      <h1 id="hero-title">თქვენი ობიექტის საინჟინრო სისტემები — ერთ პასუხისმგებელ გუნდთან</h1>
+      <p class="lead">ელექტროობა, გათბობა-გაგრილება და გენერატორი სასტუმროებისთვის, მაღაზიებისთვის, კაფეებისა და რესტორნებისთვის. ფიქსირებული თვიური ფასი, გეგმიური ვიზიტები და ყველა დანადგარის ისტორია ონლაინ.</p>
+      <div class="hero-cta">
+        <a class="btn btn-red btn-lg" href="contact/">მოითხოვეთ შეფასება <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-on-deep btn-lg" href="pricing/">რა შედის და რა ღირს</a>
+      </div>
+      <dl class="facts">
+        <div><dt>2019</dt><dd>წლიდან ვემსახურებით ბიზნესებს</dd></div>
+        <div><dt>750 ₾</dt><dd>დან, თვეში, ერთ ობიექტზე</dd></div>
+        <div><dt>1 ვიზიტი</dt><dd>გეგმიურად ყოველ თვეში</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="who-title">
+  <div class="wrap">
+    <div class="sec-head">
       <div>
-        <span class="kicker"><i class="dia"></i>საინჟინრო მომსახურება · 2019 წლიდან</span>
-        <h1 id="hero-title">თქვენი ობიექტის საინჟინრო სისტემები — ერთ პასუხისმგებელ გუნდთან</h1>
-        <p class="lead">ელექტროობა, გათბობა-გაგრილება და გენერატორი სასტუმროებისთვის, მაღაზიებისთვის, კაფეებისა და რესტორნებისთვის. ფიქსირებული თვიური ფასი, გეგმიური ვიზიტები და ყველა დანადგარის ისტორია ონლაინ.</p>
-        <div class="hero-cta">
-          <a class="btn btn-red btn-lg" href="#contact">მოითხოვეთ შეფასება <svg class="ico"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-on-deep btn-lg" href="#scope">რა შედის და რა ღირს</a>
-        </div>
-        <dl class="facts">
-          <div><dt>2019</dt><dd>წლიდან ვემსახურებით ბიზნესებს</dd></div>
-          <div><dt>750 ₾</dt><dd>დან, თვეში, ერთ ობიექტზე</dd></div>
-          <div><dt>1 ვიზიტი</dt><dd>გეგმიურად ყოველ თვეში</dd></div>
-        </dl>
+        <span class="kicker"><i class="dia"></i>ვისთვის</span>
+        <h2 class="h2" id="who-title">მათთვის, ვინც ობიექტზე პასუხისმგებელია</h2>
       </div>
+      <a class="more" href="who/">დაწვრილებით <svg class="ico"><use href="#i-arrow"/></svg></a>
     </div>
-  </section>
-
-  <section id="who" aria-labelledby="who-title">
-    <div class="wrap">
-      <span class="kicker"><i class="dia"></i>ვისთვის</span>
-      <h2 class="h2" id="who-title">მათთვის, ვინც ობიექტზე პასუხისმგებელია</h2>
-      <div class="who">
-        <article>
-          <span class="role"><i class="dia"></i>დირექტორს</span>
-          <h3>ხარჯი წინასწარ ცნობილია</h3>
-          <ul>
-            <li><svg class="ico"><use href="#i-check"/></svg><span>ფიქსირებული თვიური ფასი</span></li>
-            <li><svg class="ico"><use href="#i-check"/></svg><span>პაკეტს მიღმა სამუშაო მხოლოდ თქვენი დადასტურებით, ფასი წინასწარ</span></li>
-            <li><svg class="ico"><use href="#i-check"/></svg><span>ერთი ხელშეკრულება და ერთი პარტნიორი სამივე მიმართულებაზე</span></li>
-          </ul>
-        </article>
-        <article>
-          <span class="role"><i class="dia"></i>საინჟინრო მენეჯერს</span>
-          <h3>სრული სურათი ყველა დანადგარზე</h3>
-          <ul>
-            <li><svg class="ico"><use href="#i-check"/></svg><span>დანადგარების რეესტრი სერიული ნომრებით</span></li>
-            <li><svg class="ico"><use href="#i-check"/></svg><span>გეგმიური ვიზიტების გრაფიკი და მომსახურების ისტორია პორტალში</span></li>
-            <li><svg class="ico"><use href="#i-check"/></svg><span>ქვეკონტრაქტორებს ჩვენ ვეძებთ და ვმართავთ</span></li>
-          </ul>
-        </article>
-        <article>
-          <span class="role"><i class="dia"></i>მფლობელს</span>
-          <h3>ბიზნესი არ ჩერდება</h3>
-          <ul>
-            <li><svg class="ico"><use href="#i-check"/></svg><span>გეგმიური შემოწმება პრობლემას ავარიამდე აჩენს</span></li>
-            <li><svg class="ico"><use href="#i-check"/></svg><span>მოთხოვნაზე რეაგირება და სტატუსი ონლაინ</span></li>
-            <li><svg class="ico"><use href="#i-check"/></svg><span>ერთი პასუხისმგებელი გუნდი, რამდენიმე ხელოსნის ნაცვლად</span></li>
-          </ul>
-        </article>
-      </div>
+    <div class="cards">
+      <div class="card"><span class="role"><i class="dia"></i>დირექტორს</span><h3>ხარჯი წინასწარ ცნობილია</h3><p>ფიქსირებული თვიური ფასი; პაკეტს მიღმა სამუშაო მხოლოდ თქვენი დადასტურებით.</p></div>
+      <div class="card"><span class="role"><i class="dia"></i>საინჟინრო მენეჯერს</span><h3>სრული სურათი ყველა დანადგარზე</h3><p>რეესტრი სერიული ნომრებით, ვიზიტების გრაფიკი და ისტორია პორტალში.</p></div>
+      <div class="card"><span class="role"><i class="dia"></i>მფლობელს</span><h3>ბიზნესი არ ჩერდება</h3><p>გეგმიური შემოწმება პრობლემას ავარიამდე აჩენს.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="band" id="scope" aria-labelledby="scope-title">
-    <div class="wrap">
-      <span class="kicker"><i class="dia"></i>მომსახურება და ფასი</span>
-      <h2 class="h2" id="scope-title">რას მოიცავს და რა ღირს</h2>
-      <div class="services">
-        <span class="svc"><svg class="ico"><use href="#i-electric"/></svg>ელექტროობა</span>
-        <span class="svc"><svg class="ico"><use href="#i-hvac"/></svg>გათბობა-გაგრილება</span>
-        <span class="svc"><svg class="ico"><use href="#i-generator"/></svg>გენერატორი</span>
-      </div>
-      <div class="scope">
-        <div class="c-in">
-          <h3><svg class="ico"><use href="#i-check"/></svg>შედის პაკეტში</h3>
-          <ul>
-            <li>თვეში 1 გეგმიური ვიზიტი</li>
-            <li>დანადგარების აღწერა და ონლაინ მონიტორინგი</li>
-            <li>რეაგირება მოთხოვნებზე, ისტორია პორტალში</li>
-            <li>მცირე შეკეთება (ხელობა)</li>
-            <li>შუამავლობა ქვეკონტრაქტორებთან</li>
-          </ul>
-        </div>
-        <div class="c-quote">
-          <h3><svg class="ico"><use href="#i-wrench"/></svg>ცალკე, წინასწარი შეთავაზებით</h3>
-          <ul>
-            <li>მასალა და ნაწილები</li>
-            <li>მსხვილი შეკეთება</li>
-            <li>მონტაჟი და გადატანა</li>
-          </ul>
-          <p class="note">სპეციფიურ დანადგარებს, რომლებსაც ვერ ვემსახურებით, აღწერისას ცალკე მოვნიშნავთ.</p>
-        </div>
-        <div class="price">
-          <span class="latin">BASIC</span>
-          <div class="price-row"><b>750</b><span>₾-დან</span><small>/ თვე</small></div>
-          <p>ფასი ერთ ობიექტზე. საბოლოო თანხას ვაზუსტებთ აღწერისას, ობიექტის ზომისა და დანადგარების რაოდენობის მიხედვით.</p>
-          <a class="btn btn-red btn-lg" href="#contact">მოითხოვეთ შეფასება</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="start" aria-labelledby="start-title">
-    <div class="wrap">
-      <span class="kicker"><i class="dia"></i>როგორ ვიწყებთ</span>
-      <h2 class="h2" id="start-title">სამი ნაბიჯი პირველი ზარიდან მომსახურებამდე</h2>
-      <ol class="steps">
-        <li><h3>აღწერა და შეფასება</h3><p>მოვდივართ ობიექტზე, ვადგენთ დანადგარების სიას და გიგზავნით ზუსტ ფასს.</p></li>
-        <li><h3>ხელშეკრულება და გეგმა</h3><p>ყველა დანადგარს ვანიჭებთ სერიულ ნომერს, ვადგენთ გეგმიური ვიზიტების გრაფიკს და გაძლევთ წვდომას პორტალზე.</p></li>
-        <li><h3>მომსახურება</h3><p>ყოველთვიური ვიზიტები, რეაგირება მოთხოვნებზე და სრული ისტორია თითოეულ დანადგარზე.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="band" id="team" aria-labelledby="team-title">
-    <div class="wrap">
-      <div class="team-head">
-        <div>
-          <span class="kicker"><i class="dia"></i>გუნდი</span>
-          <h2 class="h2" id="team-title">ჩვენი ინჟინრები ობიექტზე</h2>
-          <p class="lead">2019 წლიდან ვმუშაობთ სასტუმროებთან, რესტორნებთან და კომერციულ ობიექტებთან: მშენებლობის ეტაპიდან ყოველდღიურ მომსახურებამდე.</p>
-        </div>
-        <p class="since">2019<small>წლიდან</small></p>
-      </div>
-      <div class="gallery">
-        <figure><img src="assets/photos/install-camera-800.jpg" alt="ინჟინერი ჭერზე დანადგარს ამონტაჟებს" width="800" height="600" loading="lazy"><figcaption>მონტაჟი სასტუმროს ინტერიერში</figcaption></figure>
-        <figure><img src="assets/photos/install-workstation-800.jpg" alt="ინჟინერი რესეფშენზე სამუშაო ადგილს აწყობს" width="800" height="1067" loading="lazy"><figcaption>სამუშაო ადგილის მოწყობა</figcaption></figure>
-        <figure><img src="assets/photos/install-ladder-800.jpg" alt="ინჟინერი კიბეზე ჭერთან დანადგარს ამონტაჟებს" width="800" height="600" loading="lazy"><figcaption>მონტაჟი ჭერზე</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" aria-labelledby="faq-title">
-    <div class="wrap">
-      <span class="kicker"><i class="dia"></i>კითხვები</span>
-      <h2 class="h2" id="faq-title">ხშირად დასმული კითხვები</h2>
-      <div class="faq">
-        <details><summary>რა ღირს ჩვენი ობიექტისთვის? <svg class="ico"><use href="#i-plus"/></svg></summary><p>Basic პაკეტი იწყება 750 ₾-დან თვეში. ზუსტ ფასს ვადგენთ აღწერისას, ობიექტის ზომისა და დანადგარების რაოდენობის მიხედვით.</p></details>
-        <details><summary>რა ხდება, თუ სამუშაო პაკეტს სცდება? <svg class="ico"><use href="#i-plus"/></svg></summary><p>ჯერ გიგზავნით შეთავაზებას ფასით. სამუშაოს ვიწყებთ მხოლოდ თქვენი დადასტურების შემდეგ; ქვეკონტრაქტორს ჩვენ ვეძებთ და ვმართავთ.</p></details>
-        <details><summary>როგორ ვხედავთ, რა გაკეთდა? <svg class="ico"><use href="#i-plus"/></svg></summary><p>კლიენტის პორტალში: დანადგარების სია, ყველა ვიზიტი და შეკეთება, გეგმიური ვიზიტების თარიღები და თქვენი მოთხოვნების სტატუსი.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="contact" aria-labelledby="contact-title">
-    <div class="wrap contact">
+<section class="band" aria-labelledby="svc-title">
+  <div class="wrap">
+    <div class="sec-head">
       <div>
-        <span class="kicker"><i class="dia"></i>კონტაქტი</span>
-        <h2 class="h2" id="contact-title">დაიწყეთ შეფასებით</h2>
-        <p class="lead">მოვალთ ობიექტზე, აღვწერთ დანადგარებს და შემოგთავაზებთ ფასს და გეგმას.</p>
-        <div class="contact-info">
-          <div class="contact-row"><span>ტელეფონი</span><strong class="todo" data-contact="phone">[ტელეფონი]</strong></div>
-          <div class="contact-row"><span>ელფოსტა</span><strong class="todo" data-contact="email">[ელფოსტა]</strong></div>
-          <div class="contact-row"><span>მისამართი</span><strong class="todo" data-contact="address">[მისამართი], თბილისი</strong></div>
-        </div>
+        <span class="kicker"><i class="dia"></i>სერვისები</span>
+        <h2 class="h2" id="svc-title">სამი მიმართულება, ერთი გუნდი</h2>
       </div>
-      <div class="form-card">
-        <form class="lead-form" id="lead-form" novalidate data-endpoint="">
-          <div class="hp" aria-hidden="true"><label for="website">ვებგვერდი</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
-          <div class="pair">
-            <div class="field" id="f-name"><label for="name">სახელი <span class="req" aria-hidden="true">*</span></label><input class="input" id="name" name="name" autocomplete="name" required><span class="err">მიუთითეთ სახელი</span></div>
-            <div class="field" id="f-role"><label for="role">თანამდებობა</label>
-              <select class="input" id="role" name="role"><option value="">აირჩიეთ</option><option>დირექტორი</option><option>საინჟინრო მენეჯერი</option><option>მფლობელი</option><option>სხვა</option></select></div>
-          </div>
-          <div class="pair">
-            <div class="field" id="f-company"><label for="company">ობიექტის სახელი</label><input class="input" id="company" name="company" autocomplete="organization"></div>
-            <div class="field" id="f-type"><label for="type">ობიექტის ტიპი <span class="req" aria-hidden="true">*</span></label>
-              <select class="input" id="type" name="type" required>
-                <option value="">აირჩიეთ</option><option>სასტუმრო</option><option>მაღაზია</option><option>კაფე</option><option>რესტორანი</option><option>სხვა</option>
-              </select><span class="err">აირჩიეთ ობიექტის ტიპი</span></div>
-          </div>
-          <div class="pair">
-            <div class="field" id="f-phone"><label for="phone">ტელეფონი</label><input class="input" id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+995 5XX XX XX XX"><span class="err">მიუთითეთ ტელეფონი ან ელფოსტა</span></div>
-            <div class="field" id="f-email"><label for="email">ელფოსტა</label><input class="input" id="email" name="email" type="email" autocomplete="email"><span class="err">ელფოსტა არასწორია</span></div>
-          </div>
-          <div class="field" id="f-msg"><label for="message">კომენტარი <span class="opt">(არასავალდებულო)</span></label><textarea class="input" id="message" name="message" rows="3" placeholder="მაგ. ქალაქი, დანადგარების დაახლოებითი რაოდენობა"></textarea></div>
-          <div class="form-actions">
-            <button class="btn btn-red btn-lg" type="submit" id="submit-btn">მოთხოვნის გაგზავნა <svg class="ico"><use href="#i-arrow"/></svg></button>
-            <span class="form-note">დაგიკავშირდებით ვიზიტის დროის შესათანხმებლად.</span>
-          </div>
-          <div class="notice" id="form-ok" role="status" hidden><svg class="ico"><use href="#i-check"/></svg><p><strong id="form-ok-title">მოთხოვნა მიღებულია.</strong> <span id="form-ok-text">დაგიკავშირდებით ვიზიტის დროის შესათანხმებლად.</span></p></div>
-        </form>
-      </div>
+      <a class="more" href="services/">ყველა სერვისი <svg class="ico"><use href="#i-arrow"/></svg></a>
     </div>
-  </section>
+    <div class="cards">
+      <a class="card" href="services/#electric"><svg class="ico ico-lg"><use href="#i-electric"/></svg><h3>ელექტროობა</h3><p>ელექტროფარები, ხაზები და განათება.</p><span class="more">დაწვრილებით <svg class="ico"><use href="#i-arrow"/></svg></span></a>
+      <a class="card" href="services/#hvac"><svg class="ico ico-lg"><use href="#i-hvac"/></svg><h3>გათბობა-გაგრილება</h3><p>კონდიციონერები და გათბობა-გაგრილების დანადგარები.</p><span class="more">დაწვრილებით <svg class="ico"><use href="#i-arrow"/></svg></span></a>
+      <a class="card" href="services/#generator"><svg class="ico ico-lg"><use href="#i-generator"/></svg><h3>გენერატორი</h3><p>სარეზერვო კვება, როცა ქსელი ითიშება.</p><span class="more">დაწვრილებით <svg class="ico"><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="start-title">
+  <div class="wrap">
+    <span class="kicker"><i class="dia"></i>როგორ ვიწყებთ</span>
+    <h2 class="h2" id="start-title">სამი ნაბიჯი პირველი ზარიდან მომსახურებამდე</h2>
+    <ol class="steps">
+      <li><h3>აღწერა და შეფასება</h3><p>მოვდივართ ობიექტზე, ვადგენთ დანადგარების სიას და გიგზავნით ზუსტ ფასს.</p></li>
+      <li><h3>ხელშეკრულება და გეგმა</h3><p>ყველა დანადგარს ვანიჭებთ სერიულ ნომერს, ვადგენთ გეგმიური ვიზიტების გრაფიკს და გაძლევთ წვდომას პორტალზე.</p></li>
+      <li><h3>მომსახურება</h3><p>ყოველთვიური ვიზიტები, რეაგირება მოთხოვნებზე და სრული ისტორია თითოეულ დანადგარზე.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="price-title">
+  <div class="wrap price-teaser">
+    <div>
+      <span class="kicker"><i class="dia"></i>ფასი</span>
+      <h2 class="h2" id="price-title">ერთი პაკეტი, ფასი ობიექტის ზომით</h2>
+      <ul>
+        <li>თვეში 1 გეგმიური ვიზიტი</li>
+        <li>რეაგირება მოთხოვნებზე და მცირე შეკეთება</li>
+        <li>დანადგარების რეესტრი და ისტორია ონლაინ</li>
+      </ul>
+      <p style="margin-top:20px"><a class="more" href="pricing/">რა შედის და რა არა <svg class="ico"><use href="#i-arrow"/></svg></a></p>
+    </div>
+
+      <div class="price">
+        <span class="latin">BASIC</span>
+        <div class="price-row"><b>750</b><span>₾-დან</span><small>/ თვე</small></div>
+        <p>ფასი ერთ ობიექტზე. საბოლოო თანხას ვაზუსტებთ აღწერისას, ობიექტის ზომისა და დანადგარების რაოდენობის მიხედვით.</p>
+        <a class="btn btn-red btn-lg" href="contact/">მოითხოვეთ შეფასება</a>
+      </div>
+
+  </div>
+</section>
+
+<section class="cta-band" aria-label="შეფასების მოთხოვნა">
+  <div class="wrap">
+    <div>
+      <h2>დაიწყეთ ობიექტის აღწერით</h2>
+      <p>მოვალთ ობიექტზე, აღვწერთ დანადგარებს და გიგზავნით ფასს და გეგმას.</p>
+    </div>
+    <a class="btn btn-red btn-lg" href="contact/">მოითხოვეთ შეფასება <svg class="ico"><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
 </main>
 
 <footer>
   <div class="wrap">
     <img src="assets/brand/teki-logo-white.svg" alt="Teki.GE" width="626" height="212">
     <nav aria-label="ქვედა მენიუ">
-      <a href="#who">ვისთვის</a>
-      <a href="#scope">მომსახურება და ფასი</a>
-      <a href="#contact">კონტაქტი</a>
+      <a href="who/">ვისთვის</a>
+      <a href="services/">სერვისები</a>
+      <a href="pricing/">ფასი</a>
+      <a href="team/">გუნდი</a>
+      <a href="contact/">კონტაქტი</a>
       <a href="https://helpdesk.itconnect.ge" target="_blank" rel="noopener">კლიენტის პორტალი</a>
     </nav>
-    <span>© 2019–2026 შპს ტეკი</span>
+    <div class="foot-contact"><a data-contact="phone" href="#">+995 32 2 420 710</a><a data-contact="email" href="#">info@teki.ge</a><span>© 2019–2026 შპს ტეკი</span></div>
   </div>
 </footer>
-
-<script>
-  // Contact details: fill these in and the placeholders above are replaced.
-  var CONTACT = { phone: '+995 32 2 420 710', email: 'info@teki.ge', address: 'ილია ჭავჭავაძის გამზირი 37მ, თბილისი' };
-
-  (function () {
-    Object.keys(CONTACT).forEach(function (k) {
-      if (!CONTACT[k]) return;
-      var el = document.querySelector('[data-contact="' + k + '"]');
-      if (el) { el.textContent = CONTACT[k]; el.classList.remove('todo'); }
-    });
-
-    // Lead form → the endpoint in data-endpoint → helpdesk CRM (contact + deal).
-    // GitHub Pages serves static files only, so the endpoint runs elsewhere; until it is set, the form says so.
-    var form = document.getElementById('lead-form');
-    var startedAt = Date.now();
-    function newId() { try { return crypto.randomUUID(); } catch (e) { return String(Date.now()) + Math.random().toString(16).slice(2); } }
-    function setInvalid(id, bad) { document.getElementById(id).classList.toggle('invalid', bad); }
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var v = function (id) { return document.getElementById(id).value.trim(); };
-      var email = v('email');
-      var badName = !v('name'), badType = !v('type');
-      var badContact = !v('phone') && !email;
-      var badEmail = !!email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      setInvalid('f-name', badName); setInvalid('f-type', badType); setInvalid('f-phone', badContact); setInvalid('f-email', badEmail);
-      if (badName || badType || badContact || badEmail) {
-        var first = form.querySelector('.invalid .input'); if (first) first.focus();
-        return;
-      }
-      var data = {}; new FormData(form).forEach(function (val, key) { data[key] = val; });
-      data.ts = startedAt; data.submission_id = form.dataset.submission || (form.dataset.submission = newId());
-      var endpoint = form.getAttribute('data-endpoint');
-      var ok = document.getElementById('form-ok'), okText = document.getElementById('form-ok-text'), submit = document.getElementById('submit-btn');
-      function done() { ok.hidden = false; ok.classList.remove('is-error'); document.getElementById('form-ok-title').textContent = 'მოთხოვნა მიღებულია.'; okText.textContent = 'დაგიკავშირდებით ვიზიტის დროის შესათანხმებლად.'; form.querySelectorAll('.input').forEach(function (i) { i.value = ''; }); delete form.dataset.submission; submit.disabled = false; }
-      function fail(title, text) { submit.disabled = false; ok.hidden = false; ok.classList.add('is-error'); document.getElementById('form-ok-title').textContent = title; okText.textContent = text; }
-      if (!endpoint) { fail('ფორმა დროებით არ მუშაობს.', 'დაგვიკავშირდით ტელეფონით ან ელფოსტით, მონაცემები ფორმის გვერდითაა.'); return; }
-      submit.disabled = true;
-      fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
-        .then(function (r) {
-          if (r.ok) return done();
-          if (r.status === 422) return fail('გადაამოწმეთ ველები.', 'სახელი, ობიექტის ტიპი და ტელეფონი ან ელფოსტა სავალდებულოა.');
-          if (r.status === 429) return fail('ძალიან ბევრი მცდელობა.', 'სცადეთ რამდენიმე წუთში ან დაგვირეკეთ.');
-          throw new Error(r.status);
-        })
-        .catch(function () { fail('გაგზავნა ვერ მოხერხდა.', 'სცადეთ თავიდან ან დაგვირეკეთ.'); });
-    });
-  })();
-</script>
+<script src="assets/site.js"></script>
 </body>
 </html>
