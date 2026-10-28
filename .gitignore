@@ -1,0 +1,6 @@
+# Local test copies and OS files
+_*.html
+.DS_Store
+Thumbs.db
+# Never commit server credentials
+config.php
