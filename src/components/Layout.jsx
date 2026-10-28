@@ -48,15 +48,15 @@ function Header() {
         <Link to={p('/')} aria-label={t.nav.home} className="flex shrink-0 items-center">
           <Logo className="h-9 w-auto" />
         </Link>
-        <nav aria-label={t.nav.main} className="hidden flex-1 justify-end gap-5 xl:flex">
+        <nav aria-label={t.nav.main} className="hidden flex-1 justify-end gap-4 lg:flex xl:gap-5">
           {NAV.map((n) => <NavLink key={n.key} to={p(n.to)} className={navClass}>{t.nav[n.key]}</NavLink>)}
         </nav>
         <div className="flex items-center gap-2">
           <LangSelect className="max-[380px]:hidden" />
-          <Button to="/contact/" size="sm" className="max-[560px]:hidden">{t.common.requestShort}</Button>
+          <Button to="/contact/" size="sm" className="max-[560px]:hidden lg:max-xl:hidden">{t.common.requestShort}</Button>
           <button
             type="button"
-            className="inline-flex size-11 items-center justify-center rounded-lg bg-bg-2 text-ink xl:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-lg bg-bg-2 text-ink lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={t.nav.menu}
@@ -66,7 +66,7 @@ function Header() {
           </button>
         </div>
       </div>
-      <nav id="mobile-nav" aria-label={t.nav.menu} hidden={!open} className="bg-bg xl:hidden">
+      <nav id="mobile-nav" aria-label={t.nav.menu} hidden={!open} className="bg-bg lg:hidden">
         <div className="wrap grid pb-3">
           {NAV.map((n) => (
             <NavLink key={n.key} to={p(n.to)} className={({ isActive }) => `py-3 text-[15px] font-semibold no-underline ${isActive ? 'text-accent' : ''}`}>{t.nav[n.key]}</NavLink>
