@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://teki.ge/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ka_GE">
-<meta property="og:image" content="https://teki.ge/assets/photos/team-hotel-1600.jpg">
+<meta property="og:image" content="https://teki.ge/assets/photos/install-camera-800.jpg">
 <link rel="canonical" href="https://teki.ge/">
 <link rel="icon" type="image/svg+xml" href="assets/brand/teki-mark.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
@@ -111,7 +111,9 @@
 
   /* Hero */
   .hero { position: relative; overflow: hidden; background: var(--navy-deep); color: var(--on-deep); padding-block: 72px; --focus: #ffffff; }
-  .hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 56px; align-items: center; }
+  .hero .wrap { position: relative; z-index: 1; }
+  .hero .wrap > div { max-width: 720px; }
+  .hero::after { content: ""; position: absolute; width: 560px; height: 560px; right: -200px; top: 50%; margin-top: -280px; background: #e51b23; border-radius: 56px; transform: rotate(45deg); }
   .hero .kicker { color: var(--on-deep-2); }
   .hero h1 { font: 800 46px/54px var(--font); letter-spacing: -.01em; }
   .hero .lead { color: var(--on-deep-2); }
@@ -119,10 +121,9 @@
   .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 40px 0 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.18); }
   .facts dt { font: 800 28px/34px var(--font); color: var(--on-deep); white-space: nowrap; }
   .facts dd { margin: 4px 0 0; color: var(--on-deep-2); font-size: 14px; line-height: 20px; }
-  .hero-photo { position: relative; }
-  .hero-photo::before { content: ""; position: absolute; width: 180px; height: 180px; right: -40px; top: -40px; background: #e51b23; border-radius: 18px; transform: rotate(45deg); }
-  .hero-photo img { position: relative; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-lg); }
-  @media (max-width: 960px) { .hero .wrap { grid-template-columns: minmax(0, 1fr); } .hero h1 { font-size: 36px; line-height: 44px; } .hero-photo::before { width: 120px; height: 120px; right: -20px; top: -24px; } }
+  @media (max-width: 1240px) { .hero::after { width: 420px; height: 420px; right: -260px; margin-top: -210px; border-radius: 42px; } }
+  @media (max-width: 1040px) { .hero::after { display: none; } }
+  @media (max-width: 960px) { .hero h1 { font-size: 36px; line-height: 44px; } }
   @media (max-width: 480px) { .hero { padding-block: 44px 56px; } .hero h1 { font-size: 29px; line-height: 37px; } .hero-cta .btn { width: 100%; } .facts { grid-template-columns: minmax(0, 1fr); gap: 12px; } .facts div { display: flex; align-items: baseline; gap: 12px; } .facts dd { margin: 0; } }
 
   /* Who it is for */
@@ -270,9 +271,6 @@
           <div><dt>1 ვიზიტი</dt><dd>გეგმიურად ყოველ თვეში</dd></div>
         </dl>
       </div>
-      <div class="hero-photo">
-        <img src="assets/photos/team-hotel-1600.jpg" srcset="assets/photos/team-hotel-800.jpg 800w, assets/photos/team-hotel-1600.jpg 1600w" sizes="(max-width: 960px) 100vw, 520px" alt="Teki.GE-ის ინჟინერი სასტუმროს ტერიტორიაზე" width="1600" height="1200">
-      </div>
     </div>
   </section>
 
@@ -376,7 +374,7 @@
       <div class="gallery">
         <figure><img src="assets/photos/install-camera-800.jpg" alt="ინჟინერი ჭერზე დანადგარს ამონტაჟებს" width="800" height="600" loading="lazy"><figcaption>მონტაჟი სასტუმროს ინტერიერში</figcaption></figure>
         <figure><img src="assets/photos/install-workstation-800.jpg" alt="ინჟინერი რესეფშენზე სამუშაო ადგილს აწყობს" width="800" height="1067" loading="lazy"><figcaption>სამუშაო ადგილის მოწყობა</figcaption></figure>
-        <figure><img src="assets/photos/site-visit-800.jpg" alt="ინჟინერი მშენებარე შენობის წინ" width="800" height="600" loading="lazy"><figcaption>ობიექტის დათვალიერება მშენებლობის ეტაპზე</figcaption></figure>
+        <figure><img src="assets/photos/install-ladder-800.jpg" alt="ინჟინერი კიბეზე ჭერთან დანადგარს ამონტაჟებს" width="800" height="600" loading="lazy"><figcaption>მონტაჟი ჭერზე</figcaption></figure>
       </div>
     </div>
   </section>
