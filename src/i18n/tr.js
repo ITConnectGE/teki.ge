@@ -119,7 +119,7 @@ export default {
     rolesLabel: 'Roller',
     typesKicker: 'Tesisler', typesTitle: 'Kimlere hizmet veriyoruz',
     types: [
-      { title: 'Otel', text: 'Odaların, lobinin ve teknik odaların elektriği ve iklimlendirmesi. İşleri misafirler rahatsız olmayacak şekilde planlarız.' },
+      { title: 'Küçük oteller', text: 'Butik ve aile otelleri. Odaların, lobinin ve teknik odaların elektriği ve iklimlendirmesi. İşleri misafirler rahatsız olmayacak şekilde planlarız.' },
       { title: 'Ofis', text: 'Aydınlatma, iklimlendirme ve sunucu odası dahil yedek güç. İşleri çalışanları rahatsız etmeyecek şekilde planlarız.' },
       { title: 'Mağaza', text: 'Aydınlatma, iklimlendirme ve yedek güç. Mağaza çalışma saatlerinde durmamalı.' },
       { title: 'Kafe ve restoran', text: 'Salon ve mutfağın elektriği, ısıtma-soğutma ve jeneratör; yoğun saatler göz önünde bulundurularak.' },
