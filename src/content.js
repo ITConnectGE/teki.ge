@@ -39,3 +39,6 @@ export const PHOTOS = ['assets/photos/install-camera-800.jpg', 'assets/photos/in
 // The lead endpoint accepts these Georgian values whatever language the form is shown in;
 // same order as t.form.types.
 export const FORM_TYPES = ['სასტუმრო', 'მაღაზია', 'კაფე', 'რესტორანი', 'ოფისი', 'სხვა']
+
+// Short silent loops from our jobs, without the .mp4/.jpg extension; same order as t.work.clips.
+export const VIDEOS = ['assets/video/laser', 'assets/video/team-mount', 'assets/video/tv-result', 'assets/video/corridor']

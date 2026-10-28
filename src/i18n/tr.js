@@ -144,6 +144,13 @@ export default {
     ],
   },
 
+  work: {
+    kicker: 'İş başında', title: 'Sahada nasıl çalışıyoruz',
+    lead: 'İşlerimizden gerçek görüntüler: lazerle montaj, ekip çalışması ve sonuç.',
+    more: 'Ekip',
+    clips: ['Lazer hizalayıcıyla işaretleme ve montaj', 'Tek işte iki mühendis', 'Sonuç: duvara monte edilmiş TV', 'Otel koridoru: aydınlatma ve acil çıkış işaretleri'],
+  },
+
   teamPage: {
     kicker: 'Ekip',
     title: 'Mühendislerimiz sahada',

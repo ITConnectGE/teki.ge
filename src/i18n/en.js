@@ -144,6 +144,13 @@ export default {
     ],
   },
 
+  work: {
+    kicker: 'At work', title: 'How we work on site',
+    lead: 'Real footage from our jobs: laser-guided installation, teamwork and the finished result.',
+    more: 'Team',
+    clips: ['Marking and mounting with a laser level', 'Two engineers on one job', 'Result: TV mounted on the wall', 'Hotel corridor: lighting and exit signs'],
+  },
+
   teamPage: {
     kicker: 'Team',
     title: 'Our engineers on site',

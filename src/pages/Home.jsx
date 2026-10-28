@@ -1,6 +1,7 @@
 import Icon from '../components/Icon.jsx'
 import { Button, Card, CardText, CardTitle, CtaBand, Grid, Kicker, Lead, More, PricePlate, Role, SecHead, Section, usePageTitle } from '../components/ui.jsx'
 import Steps from '../components/Steps.jsx'
+import WorkVideos from '../components/WorkVideos.jsx'
 import { DIGITAL_ICONS, SERVICE_IDS } from '../content.js'
 import { useI18n } from '../i18n/index.jsx'
 
@@ -77,7 +78,9 @@ export default function Home() {
 
       <Steps />
 
-      <Section band labelledBy="price-title">
+      <WorkVideos band more />
+
+      <Section labelledBy="price-title">
         <div className="grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,360px)] md:gap-12">
           <div>
             <Kicker>{h.priceKicker}</Kicker>

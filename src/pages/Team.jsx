@@ -1,5 +1,6 @@
 import { CtaBand, H2, Kicker, Lead, PageHead, Section, asset, usePageTitle } from '../components/ui.jsx'
 import { PHOTOS } from '../content.js'
+import WorkVideos from '../components/WorkVideos.jsx'
 import { useI18n } from '../i18n/index.jsx'
 
 export default function Team() {
@@ -29,6 +30,7 @@ export default function Team() {
           ))}
         </div>
       </Section>
+      <WorkVideos band />
       <CtaBand />
     </>
   )
