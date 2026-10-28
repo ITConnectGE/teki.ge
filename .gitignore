@@ -4,3 +4,7 @@ _*.html
 Thumbs.db
 # Never commit server credentials
 config.php
+node_modules/
+dist/
+dist-ssr/
+dist-preview/

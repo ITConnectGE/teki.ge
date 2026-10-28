@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* TEKI tokens. Components use them through the Tailwind theme below, so dark mode is a variable swap. */
+:root {
+  --bg: #ffffff; --bg-2: #f3f5f8; --plate: #eef1f5;
+  --ink: #14202e; --ink-2: #4b5a6b; --line: #dde2e8; --line-strong: #7a8797;
+  --navy: #1b2b3f; --on-navy: #ffffff; --on-navy-2: #c2cedc;
+  --accent: #c4121a; --accent-hover: #a50f16; --accent-soft: #fde7e8; --btn: #c4121a;
+  --ok: #1b6e3c; --ok-soft: #e2f4e9;
+  --focus: #364f6b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1622; --bg-2: #142233; --plate: #172638;
+    --ink: #eaf0f6; --ink-2: #a7b3c2; --line: #24344a; --line-strong: #5b6d84;
+    --navy: #15253a; --on-navy-2: #c9d4e2;
+    --accent: #ff6b70; --accent-hover: #b9141b; --accent-soft: #3a1219; --btn: #d8161e;
+    --ok: #6fd49a; --ok-soft: #0f3020;
+    --focus: #ffffff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1622; --bg-2: #142233; --plate: #172638;
+  --ink: #eaf0f6; --ink-2: #a7b3c2; --line: #24344a; --line-strong: #5b6d84;
+  --navy: #15253a; --on-navy-2: #c9d4e2;
+  --accent: #ff6b70; --accent-hover: #b9141b; --accent-soft: #3a1219; --btn: #d8161e;
+  --ok: #6fd49a; --ok-soft: #0f3020;
+  --focus: #ffffff;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-plate: var(--plate);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-navy: var(--navy);
+  --color-on-navy: var(--on-navy);
+  --color-on-navy-2: var(--on-navy-2);
+  --color-brand: #e51b23;
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-btn: var(--btn);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --font-sans: "Noto Sans Georgian", "Noto Sans", system-ui, sans-serif;
+  --font-latin: "Squada One", "Noto Sans Georgian", system-ui, sans-serif;
+}
+
+@utility wrap {
+  max-width: 1160px;
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  @media (min-width: 720px) {
+    padding-left: max(24px, env(safe-area-inset-left, 0px));
+    padding-right: max(24px, env(safe-area-inset-right, 0px));
+  }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { background: var(--bg); color: var(--ink); font-size: 15px; line-height: 24px; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { text-wrap: balance; }
+  [hidden] { display: none !important; }
+  :where(a, button, input, select, textarea, summary):focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+}
+
+/* The logo has a light and a dark file; show the one that matches the theme. */
+.logo-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logo-light { display: none; }
+  :root:not([data-theme="light"]) .logo-dark { display: block; }
+}
+:root[data-theme="dark"] .logo-light { display: none; }
+:root[data-theme="dark"] .logo-dark { display: block; }
+
+.select-arrow {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink-2) 50%), linear-gradient(135deg, var(--ink-2) 50%, transparent 50%);
+  background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+}
+.faq summary::-webkit-details-marker { display: none; }
