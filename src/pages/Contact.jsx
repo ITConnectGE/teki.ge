@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react'
 import Icon from '../components/Icon.jsx'
 import { H2, PageHead, Section, usePageTitle } from '../components/ui.jsx'
-import { CONTACT, FORM_ROLES, FORM_TYPES, LEAD_ENDPOINT } from '../content.js'
+import { CONTACT, FORM_TYPES, LEAD_ENDPOINT } from '../content.js'
 import { useI18n } from '../i18n/index.jsx'
 
-const EMPTY = { name: '', role: '', company: '', type: '', phone: '', email: '', message: '', website: '' }
+const EMPTY = { name: '', phone: '', type: '', message: '', website: '' }
 
 const inputCls = 'w-full min-h-11 rounded-lg border bg-bg px-3 py-2.5 text-[15px] leading-[22px] text-ink placeholder:text-ink-2 focus:border-(--focus) focus:outline-2 focus:outline-(--focus) focus:outline-offset-0'
 
@@ -45,9 +45,8 @@ function LeadForm() {
     const v = Object.fromEntries(Object.entries(data).map(([k, x]) => [k, x.trim()]))
     const errs = {}
     if (!v.name) errs.name = f.errors.name
+    if (!/^[0-9+()\s-]{6,30}$/.test(v.phone)) errs.phone = f.errors.phone
     if (!v.type) errs.type = f.errors.type
-    if (!v.phone && !v.email) errs.phone = f.errors.contact
-    if (v.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.email)) errs.email = f.errors.email
     setErrors(errs)
     if (Object.keys(errs).length) {
       formRef.current.querySelector(`#${Object.keys(errs)[0]}`)?.focus()
@@ -77,7 +76,7 @@ function LeadForm() {
   }
 
   // Option values stay in Georgian: the lead endpoint and the CRM expect those.
-  const options = (values, labels) => values.map((v, i) => <option key={v} value={v}>{labels[i]}</option>)
+  const types = FORM_TYPES.map((v, i) => <option key={v} value={v}>{f.types[i]}</option>)
 
   return (
     <form ref={formRef} noValidate onSubmit={submit} className="grid gap-4 rounded-xl bg-(--card) p-5 sm:p-7">
@@ -90,30 +89,15 @@ function LeadForm() {
         <Field id="name" label={f.name} required error={errors.name}>
           <input id="name" name="name" autoComplete="name" required className={`${inputCls} ${border('name')}`} value={data.name} onChange={set('name')} />
         </Field>
-        <Field id="role" label={f.role}>
-          <select id="role" name="role" className={`${inputCls} select-arrow pr-10 ${border('role')}`} value={data.role} onChange={set('role')}>
-            <option value="">{f.choose}</option>{options(FORM_ROLES, f.roles)}
-          </select>
+        <Field id="phone" label={f.phone} required error={errors.phone}>
+          <input id="phone" name="phone" type="tel" autoComplete="tel" required placeholder="+995 5XX XX XX XX" className={`${inputCls} ${border('phone')}`} value={data.phone} onChange={set('phone')} />
         </Field>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Field id="company" label={f.company}>
-          <input id="company" name="company" autoComplete="organization" className={`${inputCls} ${border('company')}`} value={data.company} onChange={set('company')} />
-        </Field>
-        <Field id="type" label={f.type} required error={errors.type}>
-          <select id="type" name="type" required className={`${inputCls} select-arrow pr-10 ${border('type')}`} value={data.type} onChange={set('type')}>
-            <option value="">{f.choose}</option>{options(FORM_TYPES, f.types)}
-          </select>
-        </Field>
-      </div>
-      <div className="grid gap-4 sm:grid-cols-2">
-        <Field id="phone" label={f.phone} error={errors.phone}>
-          <input id="phone" name="phone" type="tel" autoComplete="tel" placeholder="+995 5XX XX XX XX" className={`${inputCls} ${border('phone')}`} value={data.phone} onChange={set('phone')} />
-        </Field>
-        <Field id="email" label={f.email} error={errors.email}>
-          <input id="email" name="email" type="email" autoComplete="email" className={`${inputCls} ${border('email')}`} value={data.email} onChange={set('email')} />
-        </Field>
-      </div>
+      <Field id="type" label={f.type} required error={errors.type}>
+        <select id="type" name="type" required className={`${inputCls} select-arrow pr-10 ${border('type')}`} value={data.type} onChange={set('type')}>
+          <option value="">{f.choose}</option>{types}
+        </select>
+      </Field>
       <Field id="message" label={f.message} optional={f.optional}>
         <textarea id="message" name="message" rows={3} placeholder={f.messagePlaceholder} className={`${inputCls} min-h-24 resize-y ${border('message')}`} value={data.message} onChange={set('message')} />
       </Field>

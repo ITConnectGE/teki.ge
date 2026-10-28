@@ -37,6 +37,5 @@ export const DIGITAL_ICONS = ['ticket', 'box', 'chart', 'image', 'history', 'shi
 export const PHOTOS = ['assets/photos/install-camera-800.jpg', 'assets/photos/install-workstation-800.jpg', 'assets/photos/install-ladder-800.jpg']
 
 // The lead endpoint accepts these Georgian values whatever language the form is shown in;
-// same order as t.form.roles and t.form.types.
-export const FORM_ROLES = ['დირექტორი', 'საინჟინრო მენეჯერი', 'მფლობელი', 'სხვა']
+// same order as t.form.types.
 export const FORM_TYPES = ['სასტუმრო', 'მაღაზია', 'კაფე', 'რესტორანი', 'სხვა']
