@@ -53,7 +53,6 @@ export default {
   },
 
   pillars: {
-    photoAlt: 'Baretli ve yelekli dört Teki.GE mühendisi, inşaat halindeki bir binanın önünde',
     kicker: 'Ne yapıyoruz', title: 'Teknik yönetim, ekipman kaydı ve bakım',
     items: [
       { title: 'Teknik yönetim', text: 'İşleri planlar, alt yüklenicileri yönetir, süreleri ve maliyeti kontrol ederiz. Tek bir sorumlu ekiple çalışırsınız.' },

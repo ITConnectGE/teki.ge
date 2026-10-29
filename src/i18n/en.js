@@ -53,7 +53,6 @@ export default {
   },
 
   pillars: {
-    photoAlt: 'Four Teki.GE engineers in hard hats and hi-vis vests outside a building under construction',
     kicker: 'What we do', title: 'Engineering management, equipment records and service',
     items: [
       { title: 'Engineering management', text: 'We plan the work, manage subcontractors and keep deadlines and costs under control. You deal with one accountable team.' },
